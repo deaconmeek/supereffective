@@ -1,0 +1,3024 @@
+[
+  {
+    "id": 1,
+    "name": "Bulbasaur",
+    "types": [
+      "Grass",
+      "Poison"
+    ],
+    "hitPoints": 90,
+    "attack": 126,
+    "defense": 126,
+    "maxCP": 1071,
+    "catchRate": 16,
+    "fleeRate": 10,
+    "evolutionMethod": "25 Bulbasaur Candy",
+    "eggDistance": "2km",
+    "quickAttacks": [
+      "Tackle",
+      "Vine Whip"
+    ],
+    "specialAttacks": [
+      "Sludge Bomb",
+      "Seed Bomb",
+      "Power Whip"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Ivysaur",
+    "types": [
+      "Grass",
+      "Poison"
+    ],
+    "hitPoints": 120,
+    "attack": 156,
+    "defense": 158,
+    "maxCP": 1632,
+    "catchRate": 8,
+    "fleeRate": 7,
+    "evolutionMethod": "100 Bulbasaur Candy",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Razor Leaf",
+      "Vine Whip"
+    ],
+    "specialAttacks": [
+      "Sludge Bomb",
+      "Solar Beam",
+      "Power Whip"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Venusaur",
+    "types": [
+      "Grass",
+      "Poison"
+    ],
+    "hitPoints": 160,
+    "attack": 198,
+    "defense": 200,
+    "maxCP": 2580,
+    "catchRate": 4,
+    "fleeRate": 5,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Razor Leaf",
+      "Vine Whip"
+    ],
+    "specialAttacks": [
+      "Sludge Bomb",
+      "Solar Beam",
+      "Petal Blizzard"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Charmander",
+    "types": [
+      "Fire"
+    ],
+    "hitPoints": 78,
+    "attack": 128,
+    "defense": 108,
+    "maxCP": 955,
+    "catchRate": 16,
+    "fleeRate": 10,
+    "evolutionMethod": "25 Charmander Candy",
+    "eggDistance": "2km",
+    "quickAttacks": [
+      "Scratch",
+      "Ember"
+    ],
+    "specialAttacks": [
+      "Flame Burst",
+      "Flamethrower",
+      "Flame Charge"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Charmeleon",
+    "types": [
+      "Fire"
+    ],
+    "hitPoints": 116,
+    "attack": 160,
+    "defense": 140,
+    "maxCP": 1557,
+    "catchRate": 8,
+    "fleeRate": 7,
+    "evolutionMethod": "100 Charmander Candy",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Scratch",
+      "Ember"
+    ],
+    "specialAttacks": [
+      "Flame Burst",
+      "Flamethrower",
+      "Fire Punch"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Charizard",
+    "types": [
+      "Fire",
+      "Flying"
+    ],
+    "hitPoints": 156,
+    "attack": 212,
+    "defense": 182,
+    "maxCP": 2602,
+    "catchRate": 4,
+    "fleeRate": 5,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Wing Attack",
+      "Ember"
+    ],
+    "specialAttacks": [
+      "Dragon Claw",
+      "Flamethrower",
+      "Fire Blast"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Squirtle",
+    "types": [
+      "Water"
+    ],
+    "hitPoints": 88,
+    "attack": 112,
+    "defense": 142,
+    "maxCP": 1008,
+    "catchRate": 16,
+    "fleeRate": 10,
+    "evolutionMethod": "25 Squirtle Candy",
+    "eggDistance": "2km",
+    "quickAttacks": [
+      "Tackle",
+      "Bubble"
+    ],
+    "specialAttacks": [
+      "Aqua Jet",
+      "Aqua Tail",
+      "Water Pulse"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Wartortle",
+    "types": [
+      "Water"
+    ],
+    "hitPoints": 118,
+    "attack": 144,
+    "defense": 176,
+    "maxCP": 1582,
+    "catchRate": 8,
+    "fleeRate": 7,
+    "evolutionMethod": "100 Squirtle Candy",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Bite",
+      "Water Gun"
+    ],
+    "specialAttacks": [
+      "Aqua Jet",
+      "Hydro Pump",
+      "Ice Beam"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Blastoise",
+    "types": [
+      "Water"
+    ],
+    "hitPoints": 158,
+    "attack": 186,
+    "defense": 222,
+    "maxCP": 2542,
+    "catchRate": 4,
+    "fleeRate": 5,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Bite",
+      "Water Gun"
+    ],
+    "specialAttacks": [
+      "Ice Beam",
+      "Hydro Pump",
+      "Flash Cannon"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Caterpie",
+    "types": [
+      "Bug"
+    ],
+    "hitPoints": 90,
+    "attack": 62,
+    "defense": 66,
+    "maxCP": 443,
+    "catchRate": 40,
+    "fleeRate": 20,
+    "evolutionMethod": "12 Caterpie Candy",
+    "eggDistance": "2km",
+    "quickAttacks": [
+      "Tackle",
+      "Bug Bite"
+    ],
+    "specialAttacks": [
+      "Struggle"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Metapod",
+    "types": [
+      "Bug"
+    ],
+    "hitPoints": 100,
+    "attack": 56,
+    "defense": 86,
+    "maxCP": 477,
+    "catchRate": 20,
+    "fleeRate": 9,
+    "evolutionMethod": "50 Caterpie Candy",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Tackle",
+      "Bug Bite"
+    ],
+    "specialAttacks": [
+      "Struggle"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Butterfree",
+    "types": [
+      "Bug",
+      "Flying"
+    ],
+    "hitPoints": 120,
+    "attack": 144,
+    "defense": 144,
+    "maxCP": 1454,
+    "catchRate": 10,
+    "fleeRate": 6,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Confusion",
+      "Bug Bite"
+    ],
+    "specialAttacks": [
+      "Psychic",
+      "Bug Buzz",
+      "Signal Beam"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Weedle",
+    "types": [
+      "Bug",
+      "Poison"
+    ],
+    "hitPoints": 80,
+    "attack": 68,
+    "defense": 64,
+    "maxCP": 449,
+    "catchRate": 40,
+    "fleeRate": 20,
+    "evolutionMethod": "12 Weedle Candy",
+    "eggDistance": "2km",
+    "quickAttacks": [
+      "Bug Bite",
+      "Poison Sting"
+    ],
+    "specialAttacks": [
+      "Struggle"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Kakuna",
+    "types": [
+      "Bug",
+      "Poison"
+    ],
+    "hitPoints": 90,
+    "attack": 62,
+    "defense": 82,
+    "maxCP": 485,
+    "catchRate": 20,
+    "fleeRate": 9,
+    "evolutionMethod": "50 Weedle Candy",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Bug Bite",
+      "Poison Sting"
+    ],
+    "specialAttacks": [
+      "Struggle"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Beedrill",
+    "types": [
+      "Bug",
+      "Poison"
+    ],
+    "hitPoints": 130,
+    "attack": 144,
+    "defense": 130,
+    "maxCP": 1439,
+    "catchRate": 10,
+    "fleeRate": 6,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Bug Bite",
+      "Poison Jab"
+    ],
+    "specialAttacks": [
+      "Aerial Ace",
+      "Sludge Bomb",
+      "X-Scissor"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Pidgey",
+    "types": [
+      "Normal",
+      "Flying"
+    ],
+    "hitPoints": 80,
+    "attack": 94,
+    "defense": 90,
+    "maxCP": 679,
+    "catchRate": 40,
+    "fleeRate": 20,
+    "evolutionMethod": "12 Pidgey Candy",
+    "eggDistance": "2km",
+    "quickAttacks": [
+      "Tackle",
+      "Quick Attack"
+    ],
+    "specialAttacks": [
+      "Twister",
+      "Aerial Ace",
+      "Air Cutter"
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Pidgeotto",
+    "types": [
+      "Normal",
+      "Flying"
+    ],
+    "hitPoints": 126,
+    "attack": 126,
+    "defense": 122,
+    "maxCP": 1223,
+    "catchRate": 20,
+    "fleeRate": 9,
+    "evolutionMethod": "50 Pidgey Candy",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Wing Attack",
+      "Steel Wing"
+    ],
+    "specialAttacks": [
+      "Twister",
+      "Aerial Ace",
+      "Air Cutter"
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Pidgeot",
+    "types": [
+      "Normal",
+      "Flying"
+    ],
+    "hitPoints": 166,
+    "attack": 170,
+    "defense": 166,
+    "maxCP": 2091,
+    "catchRate": 10,
+    "fleeRate": 6,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Wing Attack",
+      "Steel Wing"
+    ],
+    "specialAttacks": [
+      "Hurricane",
+      "Aerial Ace",
+      "Air Cutter"
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Rattata",
+    "types": [
+      "Normal"
+    ],
+    "hitPoints": 60,
+    "attack": 92,
+    "defense": 86,
+    "maxCP": 581,
+    "catchRate": 40,
+    "fleeRate": 20,
+    "evolutionMethod": "25 Rattata Candy",
+    "eggDistance": "2km",
+    "quickAttacks": [
+      "Tackle",
+      "Quick Attack"
+    ],
+    "specialAttacks": [
+      "Dig",
+      "Hyper Fang",
+      "Body Slam"
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Raticate",
+    "types": [
+      "Normal"
+    ],
+    "hitPoints": 110,
+    "attack": 146,
+    "defense": 150,
+    "maxCP": 1444,
+    "catchRate": 16,
+    "fleeRate": 7,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Bite",
+      "Quick Attack"
+    ],
+    "specialAttacks": [
+      "Dig",
+      "Hyper Fang",
+      "Hyper Beam"
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Spearow",
+    "types": [
+      "Normal",
+      "Flying"
+    ],
+    "hitPoints": 80,
+    "attack": 102,
+    "defense": 78,
+    "maxCP": 686,
+    "catchRate": 40,
+    "fleeRate": 15,
+    "evolutionMethod": "50 Spearow Candy",
+    "eggDistance": "2km",
+    "quickAttacks": [
+      "Quick Attack",
+      "Peck"
+    ],
+    "specialAttacks": [
+      "Aerial Ace",
+      "Twister",
+      "Drill Peck"
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Fearow",
+    "types": [
+      "Normal",
+      "Flying"
+    ],
+    "hitPoints": 130,
+    "attack": 168,
+    "defense": 146,
+    "maxCP": 1746,
+    "catchRate": 16,
+    "fleeRate": 7,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Steel Wing",
+      "Peck"
+    ],
+    "specialAttacks": [
+      "Aerial Ace",
+      "Twister",
+      "Drill Run"
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Ekans",
+    "types": [
+      "Poison"
+    ],
+    "hitPoints": 70,
+    "attack": 112,
+    "defense": 112,
+    "maxCP": 824,
+    "catchRate": 40,
+    "fleeRate": 15,
+    "evolutionMethod": "50 Ekans Candy",
+    "eggDistance": "5km",
+    "quickAttacks": [
+      "Acid",
+      "Poison Sting"
+    ],
+    "specialAttacks": [
+      "Gunk Shot",
+      "Sludge Bomb",
+      "Wrap"
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Arbok",
+    "types": [
+      "Poison"
+    ],
+    "hitPoints": 120,
+    "attack": 166,
+    "defense": 166,
+    "maxCP": 1767,
+    "catchRate": 16,
+    "fleeRate": 7,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Acid",
+      "Bite"
+    ],
+    "specialAttacks": [
+      "Gunk Shot",
+      "Sludge Wave",
+      "Dark Pulse"
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Pikachu",
+    "types": [
+      "Electric"
+    ],
+    "hitPoints": 70,
+    "attack": 124,
+    "defense": 108,
+    "maxCP": 887,
+    "catchRate": 16,
+    "fleeRate": 10,
+    "evolutionMethod": "50 Pikachu Candy",
+    "eggDistance": "2km",
+    "quickAttacks": [
+      "Thunder Shock",
+      "Quick Attack"
+    ],
+    "specialAttacks": [
+      "Thunderbolt",
+      "Discharge",
+      "Thunder"
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Raichu",
+    "types": [
+      "Electric"
+    ],
+    "hitPoints": 120,
+    "attack": 200,
+    "defense": 154,
+    "maxCP": 2028,
+    "catchRate": 8,
+    "fleeRate": 6,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Thunder Shock",
+      "Spark"
+    ],
+    "specialAttacks": [
+      "Brick Break",
+      "Thunder Punch",
+      "Thunder"
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Sandshrew",
+    "types": [
+      "Ground"
+    ],
+    "hitPoints": 100,
+    "attack": 90,
+    "defense": 114,
+    "maxCP": 798,
+    "catchRate": 40,
+    "fleeRate": 10,
+    "evolutionMethod": "50 Sandshrew Candy",
+    "eggDistance": "5km",
+    "quickAttacks": [
+      "Scratch",
+      "Mud Shot"
+    ],
+    "specialAttacks": [
+      "Dig",
+      "Rock Slide",
+      "Rock Tomb"
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Sandslash",
+    "types": [
+      "Ground"
+    ],
+    "hitPoints": 150,
+    "attack": 150,
+    "defense": 172,
+    "maxCP": 1810,
+    "catchRate": 16,
+    "fleeRate": 6,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Metal Claw",
+      "Mud Shot"
+    ],
+    "specialAttacks": [
+      "Rock Tomb",
+      "Bulldoze",
+      "Earthquake"
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Nidoran♀",
+    "types": [
+      "Poison"
+    ],
+    "hitPoints": 110,
+    "attack": 100,
+    "defense": 104,
+    "maxCP": 876,
+    "catchRate": 40,
+    "fleeRate": 15,
+    "evolutionMethod": "25 Nidoran♀ Candy",
+    "eggDistance": "5km",
+    "quickAttacks": [
+      "Poison Sting",
+      "Bite"
+    ],
+    "specialAttacks": [
+      "Poison Fang",
+      "Sludge Bomb",
+      "Body Slam"
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Nidorina",
+    "types": [
+      "Poison"
+    ],
+    "hitPoints": 140,
+    "attack": 132,
+    "defense": 136,
+    "maxCP": 1404,
+    "catchRate": 20,
+    "fleeRate": 7,
+    "evolutionMethod": "100 Nidoran♀ Candy",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Poison Sting",
+      "Bite"
+    ],
+    "specialAttacks": [
+      "Poison Fang",
+      "Sludge Bomb",
+      "Dig"
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Nidoqueen",
+    "types": [
+      "Poison",
+      "Ground"
+    ],
+    "hitPoints": 180,
+    "attack": 184,
+    "defense": 190,
+    "maxCP": 2485,
+    "catchRate": 10,
+    "fleeRate": 5,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Poison Jab",
+      "Bite"
+    ],
+    "specialAttacks": [
+      "Stone Edge",
+      "Sludge Wave",
+      "Earthquake"
+    ]
+  },
+  {
+    "id": 32,
+    "name": "Nidoran♂",
+    "types": [
+      "Poison"
+    ],
+    "hitPoints": 92,
+    "attack": 110,
+    "defense": 94,
+    "maxCP": 843,
+    "catchRate": 40,
+    "fleeRate": 15,
+    "evolutionMethod": "25 Nidoran♂ Candy",
+    "eggDistance": "5km",
+    "quickAttacks": [
+      "Poison Sting",
+      "Peck"
+    ],
+    "specialAttacks": [
+      "Horn Attack",
+      "Body Slam",
+      "Sludge Bomb"
+    ]
+  },
+  {
+    "id": 33,
+    "name": "Nidorino",
+    "types": [
+      "Poison"
+    ],
+    "hitPoints": 122,
+    "attack": 142,
+    "defense": 128,
+    "maxCP": 1372,
+    "catchRate": 20,
+    "fleeRate": 7,
+    "evolutionMethod": "100 Nidoran♂ Candy",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Poison Jab",
+      "Bite"
+    ],
+    "specialAttacks": [
+      "Horn Attack",
+      "Dig",
+      "Sludge Bomb"
+    ]
+  },
+  {
+    "id": 34,
+    "name": "Nidoking",
+    "types": [
+      "Poison",
+      "Ground"
+    ],
+    "hitPoints": 162,
+    "attack": 204,
+    "defense": 170,
+    "maxCP": 2475,
+    "catchRate": 10,
+    "fleeRate": 5,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Poison Jab",
+      "Fury Cutter"
+    ],
+    "specialAttacks": [
+      "Megahorn",
+      "Earthquake",
+      "Sludge Wave"
+    ]
+  },
+  {
+    "id": 35,
+    "name": "Clefairy",
+    "types": [
+      "Fairy"
+    ],
+    "hitPoints": 140,
+    "attack": 116,
+    "defense": 124,
+    "maxCP": 1200,
+    "catchRate": 24,
+    "fleeRate": 10,
+    "evolutionMethod": "50 Clefairy Candy",
+    "eggDistance": "2km",
+    "quickAttacks": [
+      "Zen Headbutt",
+      "Pound"
+    ],
+    "specialAttacks": [
+      "Body Slam",
+      "Disarming Voice",
+      "Moonblast"
+    ]
+  },
+  {
+    "id": 36,
+    "name": "Clefable",
+    "types": [
+      "Fairy"
+    ],
+    "hitPoints": 190,
+    "attack": 178,
+    "defense": 178,
+    "maxCP": 2397,
+    "catchRate": 8,
+    "fleeRate": 6,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Zen Headbutt",
+      "Pound"
+    ],
+    "specialAttacks": [
+      "Psychic",
+      "Dazzling Gleam",
+      "Moonblast"
+    ]
+  },
+  {
+    "id": 37,
+    "name": "Vulpix",
+    "types": [
+      "Fire"
+    ],
+    "hitPoints": 76,
+    "attack": 106,
+    "defense": 118,
+    "maxCP": 831,
+    "catchRate": 24,
+    "fleeRate": 10,
+    "evolutionMethod": "50 Vulpix Candy",
+    "eggDistance": "5km",
+    "quickAttacks": [
+      "Quick Attack",
+      "Ember"
+    ],
+    "specialAttacks": [
+      "Flamethrower",
+      "Body Slam",
+      "Flame Charge"
+    ]
+  },
+  {
+    "id": 38,
+    "name": "Ninetales",
+    "types": [
+      "Fire"
+    ],
+    "hitPoints": 146,
+    "attack": 176,
+    "defense": 194,
+    "maxCP": 2188,
+    "catchRate": 8,
+    "fleeRate": 6,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Feint Attack",
+      "Ember"
+    ],
+    "specialAttacks": [
+      "Heat Wave",
+      "Fire Blast",
+      "Flamethrower"
+    ]
+  },
+  {
+    "id": 39,
+    "name": "Jigglypuff",
+    "types": [
+      "Normal",
+      "Fairy"
+    ],
+    "hitPoints": 230,
+    "attack": 98,
+    "defense": 54,
+    "maxCP": 917,
+    "catchRate": 40,
+    "fleeRate": 10,
+    "evolutionMethod": "50 Jigglypuff Candy",
+    "eggDistance": "2km",
+    "quickAttacks": [
+      "Feint Attack",
+      "Pound"
+    ],
+    "specialAttacks": [
+      "Disarming Voice",
+      "Body Slam",
+      "Play Rough"
+    ]
+  },
+  {
+    "id": 40,
+    "name": "Wigglytuff",
+    "types": [
+      "Normal",
+      "Fairy"
+    ],
+    "hitPoints": 280,
+    "attack": 168,
+    "defense": 108,
+    "maxCP": 2177,
+    "catchRate": 16,
+    "fleeRate": 6,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Feint Attack",
+      "Pound"
+    ],
+    "specialAttacks": [
+      "Dazzling Gleam",
+      "Hyper Beam",
+      "Play Rough"
+    ]
+  },
+  {
+    "id": 41,
+    "name": "Zubat",
+    "types": [
+      "Poison",
+      "Flying"
+    ],
+    "hitPoints": 80,
+    "attack": 88,
+    "defense": 90,
+    "maxCP": 642,
+    "catchRate": 40,
+    "fleeRate": 20,
+    "evolutionMethod": "50 Zubat Candy",
+    "eggDistance": "2km",
+    "quickAttacks": [
+      "Bite",
+      "Quick Attack"
+    ],
+    "specialAttacks": [
+      "Sludge Bomb",
+      "Poison Fang",
+      "Air Cutter"
+    ]
+  },
+  {
+    "id": 42,
+    "name": "Golbat",
+    "types": [
+      "Poison",
+      "Flying"
+    ],
+    "hitPoints": 150,
+    "attack": 164,
+    "defense": 164,
+    "maxCP": 1921,
+    "catchRate": 16,
+    "fleeRate": 7,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Bite",
+      "Wing Attack"
+    ],
+    "specialAttacks": [
+      "Ominous Wind",
+      "Poison Fang",
+      "Air Cutter"
+    ]
+  },
+  {
+    "id": 43,
+    "name": "Oddish",
+    "types": [
+      "Grass",
+      "Poison"
+    ],
+    "hitPoints": 90,
+    "attack": 134,
+    "defense": 130,
+    "maxCP": 1148,
+    "catchRate": 48,
+    "fleeRate": 15,
+    "evolutionMethod": "25 Oddish Candy",
+    "eggDistance": "5km",
+    "quickAttacks": [
+      "Razor Leaf",
+      "Acid"
+    ],
+    "specialAttacks": [
+      "Moonblast",
+      "Seed Bomb",
+      "Sludge Bomb"
+    ]
+  },
+  {
+    "id": 44,
+    "name": "Gloom",
+    "types": [
+      "Grass",
+      "Poison"
+    ],
+    "hitPoints": 120,
+    "attack": 162,
+    "defense": 158,
+    "maxCP": 1689,
+    "catchRate": 24,
+    "fleeRate": 7,
+    "evolutionMethod": "100 Oddish Candy",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Razor Leaf",
+      "Acid"
+    ],
+    "specialAttacks": [
+      "Moonblast",
+      "Petal Blizzard",
+      "Sludge Bomb"
+    ]
+  },
+  {
+    "id": 45,
+    "name": "Vileplume",
+    "types": [
+      "Grass",
+      "Poison"
+    ],
+    "hitPoints": 150,
+    "attack": 202,
+    "defense": 190,
+    "maxCP": 2492,
+    "catchRate": 12,
+    "fleeRate": 5,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Razor Leaf",
+      "Acid"
+    ],
+    "specialAttacks": [
+      "Moonblast",
+      "Petal Blizzard",
+      "Solar Beam"
+    ]
+  },
+  {
+    "id": 46,
+    "name": "Paras",
+    "types": [
+      "Bug",
+      "Grass"
+    ],
+    "hitPoints": 70,
+    "attack": 122,
+    "defense": 120,
+    "maxCP": 916,
+    "catchRate": 32,
+    "fleeRate": 15,
+    "evolutionMethod": "50 Paras Candy",
+    "eggDistance": "5km",
+    "quickAttacks": [
+      "Bug Bite",
+      "Scratch"
+    ],
+    "specialAttacks": [
+      "Seed Bomb",
+      "X-Scissor",
+      "Cross Poison"
+    ]
+  },
+  {
+    "id": 47,
+    "name": "Parasect",
+    "types": [
+      "Bug",
+      "Grass"
+    ],
+    "hitPoints": 120,
+    "attack": 162,
+    "defense": 170,
+    "maxCP": 1747,
+    "catchRate": 16,
+    "fleeRate": 7,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Bug Bite",
+      "Fury Cutter"
+    ],
+    "specialAttacks": [
+      "Solar Beam",
+      "X-Scissor",
+      "Cross Poison"
+    ]
+  },
+  {
+    "id": 48,
+    "name": "Venonat",
+    "types": [
+      "Bug",
+      "Poison"
+    ],
+    "hitPoints": 120,
+    "attack": 108,
+    "defense": 118,
+    "maxCP": 1029,
+    "catchRate": 40,
+    "fleeRate": 15,
+    "evolutionMethod": "50 Venonat Candy",
+    "eggDistance": "5km",
+    "quickAttacks": [
+      "Confusion",
+      "Bug Bite"
+    ],
+    "specialAttacks": [
+      "Signal Beam",
+      "Poison Fang",
+      "Psybeam"
+    ]
+  },
+  {
+    "id": 49,
+    "name": "Venomoth",
+    "types": [
+      "Bug",
+      "Poison"
+    ],
+    "hitPoints": 140,
+    "attack": 172,
+    "defense": 154,
+    "maxCP": 1890,
+    "catchRate": 16,
+    "fleeRate": 7,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Confusion",
+      "Bug Bite"
+    ],
+    "specialAttacks": [
+      "Bug Buzz",
+      "Poison Fang",
+      "Psychic"
+    ]
+  },
+  {
+    "id": 50,
+    "name": "Diglett",
+    "types": [
+      "Ground"
+    ],
+    "hitPoints": 20,
+    "attack": 108,
+    "defense": 86,
+    "maxCP": 456,
+    "catchRate": 40,
+    "fleeRate": 10,
+    "evolutionMethod": "50 Diglett Candy",
+    "eggDistance": "5km",
+    "quickAttacks": [
+      "Scratch",
+      "Mud Shot"
+    ],
+    "specialAttacks": [
+      "Rock Tomb",
+      "Dig",
+      "Mud Bomb"
+    ]
+  },
+  {
+    "id": 51,
+    "name": "Dugtrio",
+    "types": [
+      "Ground"
+    ],
+    "hitPoints": 70,
+    "attack": 148,
+    "defense": 140,
+    "maxCP": 1168,
+    "catchRate": 16,
+    "fleeRate": 6,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Sucker Punch",
+      "Mud Shot"
+    ],
+    "specialAttacks": [
+      "Stone Edge",
+      "Earthquake",
+      "Mud Bomb"
+    ]
+  },
+  {
+    "id": 52,
+    "name": "Meowth",
+    "types": [
+      "Normal"
+    ],
+    "hitPoints": 80,
+    "attack": 104,
+    "defense": 94,
+    "maxCP": 756,
+    "catchRate": 40,
+    "fleeRate": 15,
+    "evolutionMethod": "50 Meowth Candy",
+    "eggDistance": "5km",
+    "quickAttacks": [
+      "Scratch",
+      "Bite"
+    ],
+    "specialAttacks": [
+      "Dark Pulse",
+      "Night Slash",
+      "Body Slam"
+    ]
+  },
+  {
+    "id": 53,
+    "name": "Persian",
+    "types": [
+      "Normal"
+    ],
+    "hitPoints": 130,
+    "attack": 156,
+    "defense": 146,
+    "maxCP": 1631,
+    "catchRate": 16,
+    "fleeRate": 7,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Scratch",
+      "Feint Attack"
+    ],
+    "specialAttacks": [
+      "Play Rough",
+      "Power Gem",
+      "Night Slash"
+    ]
+  },
+  {
+    "id": 54,
+    "name": "Psyduck",
+    "types": [
+      "Water"
+    ],
+    "hitPoints": 100,
+    "attack": 132,
+    "defense": 112,
+    "maxCP": 1109,
+    "catchRate": 40,
+    "fleeRate": 10,
+    "evolutionMethod": "50 Psyduck Candy",
+    "eggDistance": "5km",
+    "quickAttacks": [
+      "Zen Headbutt",
+      "Water Gun"
+    ],
+    "specialAttacks": [
+      "Aqua Tail",
+      "Cross Chop",
+      "Psybeam"
+    ]
+  },
+  {
+    "id": 55,
+    "name": "Golduck",
+    "types": [
+      "Water"
+    ],
+    "hitPoints": 160,
+    "attack": 194,
+    "defense": 176,
+    "maxCP": 2386,
+    "catchRate": 16,
+    "fleeRate": 6,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Confusion",
+      "Water Gun"
+    ],
+    "specialAttacks": [
+      "Hydro Pump",
+      "Ice Beam",
+      "Psychic"
+    ]
+  },
+  {
+    "id": 56,
+    "name": "Mankey",
+    "types": [
+      "Fighting"
+    ],
+    "hitPoints": 80,
+    "attack": 112,
+    "defense": 96,
+    "maxCP": 878,
+    "catchRate": 40,
+    "fleeRate": 10,
+    "evolutionMethod": "50 Mankey Candy",
+    "eggDistance": "5km",
+    "quickAttacks": [
+      "Karate Chop",
+      "Scratch"
+    ],
+    "specialAttacks": [
+      "Brick Break",
+      "Cross Chop",
+      "Low Sweep"
+    ]
+  },
+  {
+    "id": 57,
+    "name": "Primeape",
+    "types": [
+      "Fighting"
+    ],
+    "hitPoints": 130,
+    "attack": 178,
+    "defense": 150,
+    "maxCP": 1864,
+    "catchRate": 16,
+    "fleeRate": 6,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Karate Chop",
+      "Low Kick"
+    ],
+    "specialAttacks": [
+      "Night Slash",
+      "Cross Chop",
+      "Low Sweep"
+    ]
+  },
+  {
+    "id": 58,
+    "name": "Growlithe",
+    "types": [
+      "Fire"
+    ],
+    "hitPoints": 110,
+    "attack": 156,
+    "defense": 110,
+    "maxCP": 1335,
+    "catchRate": 24,
+    "fleeRate": 10,
+    "evolutionMethod": "50 Growlithe Candy",
+    "eggDistance": "5km",
+    "quickAttacks": [
+      "Ember",
+      "Bite"
+    ],
+    "specialAttacks": [
+      "Flame Wheel",
+      "Body Slam",
+      "Flamethrower"
+    ]
+  },
+  {
+    "id": 59,
+    "name": "Arcanine",
+    "types": [
+      "Fire"
+    ],
+    "hitPoints": 180,
+    "attack": 230,
+    "defense": 180,
+    "maxCP": 2983,
+    "catchRate": 8,
+    "fleeRate": 6,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Fire Fang",
+      "Bite"
+    ],
+    "specialAttacks": [
+      "Fire Blast",
+      "Bulldoze",
+      "Flamethrower"
+    ]
+  },
+  {
+    "id": 60,
+    "name": "Poliwag",
+    "types": [
+      "Water"
+    ],
+    "hitPoints": 80,
+    "attack": 108,
+    "defense": 98,
+    "maxCP": 795,
+    "catchRate": 40,
+    "fleeRate": 15,
+    "evolutionMethod": "25 Poliwag Candy",
+    "eggDistance": "5km",
+    "quickAttacks": [
+      "Bubble",
+      "Mud Shot"
+    ],
+    "specialAttacks": [
+      "Body Slam",
+      "Bubble Beam",
+      "Mud Bomb"
+    ]
+  },
+  {
+    "id": 61,
+    "name": "Poliwhirl",
+    "types": [
+      "Water"
+    ],
+    "hitPoints": 130,
+    "attack": 132,
+    "defense": 132,
+    "maxCP": 1340,
+    "catchRate": 20,
+    "fleeRate": 7,
+    "evolutionMethod": "100 Poliwag Candy",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Bubble",
+      "Mud Shot"
+    ],
+    "specialAttacks": [
+      "Scald",
+      "Bubble Beam",
+      "Mud Bomb"
+    ]
+  },
+  {
+    "id": 62,
+    "name": "Poliwrath",
+    "types": [
+      "Water",
+      "Fighting"
+    ],
+    "hitPoints": 180,
+    "attack": 180,
+    "defense": 202,
+    "maxCP": 2505,
+    "catchRate": 10,
+    "fleeRate": 5,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Bubble",
+      "Mud Shot"
+    ],
+    "specialAttacks": [
+      "Ice Punch",
+      "Hydro Pump",
+      "Submission"
+    ]
+  },
+  {
+    "id": 63,
+    "name": "Abra",
+    "types": [
+      "Psychic"
+    ],
+    "hitPoints": 50,
+    "attack": 110,
+    "defense": 76,
+    "maxCP": 600,
+    "catchRate": 40,
+    "fleeRate": 99,
+    "evolutionMethod": "25 Abra Candy",
+    "eggDistance": "5km",
+    "quickAttacks": [
+      "Zen Headbutt"
+    ],
+    "specialAttacks": [
+      "Shadow Ball",
+      "Signal Beam",
+      "Psyshock"
+    ]
+  },
+  {
+    "id": 64,
+    "name": "Kadabra",
+    "types": [
+      "Psychic"
+    ],
+    "hitPoints": 80,
+    "attack": 150,
+    "defense": 112,
+    "maxCP": 1131,
+    "catchRate": 20,
+    "fleeRate": 7,
+    "evolutionMethod": "100 Abra Candy",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Confusion",
+      "Psycho Cut"
+    ],
+    "specialAttacks": [
+      "Shadow Ball",
+      "Dazzling Gleam",
+      "Psybeam"
+    ]
+  },
+  {
+    "id": 65,
+    "name": "Alakazam",
+    "types": [
+      "Psychic"
+    ],
+    "hitPoints": 110,
+    "attack": 186,
+    "defense": 152,
+    "maxCP": 1813,
+    "catchRate": 10,
+    "fleeRate": 5,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Confusion",
+      "Psycho Cut"
+    ],
+    "specialAttacks": [
+      "Shadow Ball",
+      "Dazzling Gleam",
+      "Psychic"
+    ]
+  },
+  {
+    "id": 66,
+    "name": "Machop",
+    "types": [
+      "Fighting"
+    ],
+    "hitPoints": 140,
+    "attack": 118,
+    "defense": 96,
+    "maxCP": 1089,
+    "catchRate": 40,
+    "fleeRate": 10,
+    "evolutionMethod": "25 Machop Candy",
+    "eggDistance": "5km",
+    "quickAttacks": [
+      "Low Kick",
+      "Karate Chop"
+    ],
+    "specialAttacks": [
+      "Brick Break",
+      "Cross Chop",
+      "Low Sweep"
+    ]
+  },
+  {
+    "id": 67,
+    "name": "Machoke",
+    "types": [
+      "Fighting"
+    ],
+    "hitPoints": 160,
+    "attack": 154,
+    "defense": 144,
+    "maxCP": 1760,
+    "catchRate": 20,
+    "fleeRate": 7,
+    "evolutionMethod": "100 Machop Candy",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Low Kick",
+      "Karate Chop"
+    ],
+    "specialAttacks": [
+      "Brick Break",
+      "Cross Chop",
+      "Submission"
+    ]
+  },
+  {
+    "id": 68,
+    "name": "Machamp",
+    "types": [
+      "Fighting"
+    ],
+    "hitPoints": 180,
+    "attack": 198,
+    "defense": 180,
+    "maxCP": 2594,
+    "catchRate": 10,
+    "fleeRate": 5,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Bullet Punch",
+      "Karate Chop"
+    ],
+    "specialAttacks": [
+      "Stone Edge",
+      "Cross Chop",
+      "Submission"
+    ]
+  },
+  {
+    "id": 69,
+    "name": "Bellsprout",
+    "types": [
+      "Grass",
+      "Poison"
+    ],
+    "hitPoints": 100,
+    "attack": 158,
+    "defense": 78,
+    "maxCP": 1117,
+    "catchRate": 40,
+    "fleeRate": 15,
+    "evolutionMethod": "25 Bellsprout Candy",
+    "eggDistance": "5km",
+    "quickAttacks": [
+      "Acid",
+      "Vine Whip"
+    ],
+    "specialAttacks": [
+      "Sludge Bomb",
+      "Power Whip",
+      "Wrap"
+    ]
+  },
+  {
+    "id": 70,
+    "name": "Weepinbell",
+    "types": [
+      "Grass",
+      "Poison"
+    ],
+    "hitPoints": 130,
+    "attack": 190,
+    "defense": 110,
+    "maxCP": 1723,
+    "catchRate": 20,
+    "fleeRate": 7,
+    "evolutionMethod": "100 Bellsprout Candy",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Acid",
+      "Razor Leaf"
+    ],
+    "specialAttacks": [
+      "Sludge Bomb",
+      "Power Whip",
+      "Seed Bomb"
+    ]
+  },
+  {
+    "id": 71,
+    "name": "Victreebel",
+    "types": [
+      "Grass",
+      "Poison"
+    ],
+    "hitPoints": 160,
+    "attack": 222,
+    "defense": 152,
+    "maxCP": 2530,
+    "catchRate": 10,
+    "fleeRate": 5,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Acid",
+      "Razor Leaf"
+    ],
+    "specialAttacks": [
+      "Sludge Bomb",
+      "Leaf Blade",
+      "Solar Beam"
+    ]
+  },
+  {
+    "id": 72,
+    "name": "Tentacool",
+    "types": [
+      "Water",
+      "Poison"
+    ],
+    "hitPoints": 80,
+    "attack": 106,
+    "defense": 136,
+    "maxCP": 905,
+    "catchRate": 40,
+    "fleeRate": 15,
+    "evolutionMethod": "50 Tentacool Candy",
+    "eggDistance": "5km",
+    "quickAttacks": [
+      "Bubble",
+      "Poison Sting"
+    ],
+    "specialAttacks": [
+      "Bubble Beam",
+      "Water Pulse",
+      "Wrap"
+    ]
+  },
+  {
+    "id": 73,
+    "name": "Tentacruel",
+    "types": [
+      "Water",
+      "Poison"
+    ],
+    "hitPoints": 160,
+    "attack": 170,
+    "defense": 196,
+    "maxCP": 2220,
+    "catchRate": 16,
+    "fleeRate": 7,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Acid",
+      "Poison Jab"
+    ],
+    "specialAttacks": [
+      "Blizzard",
+      "Hydro Pump",
+      "Sludge Wave"
+    ]
+  },
+  {
+    "id": 74,
+    "name": "Geodude",
+    "types": [
+      "Rock",
+      "Ground"
+    ],
+    "hitPoints": 80,
+    "attack": 106,
+    "defense": 118,
+    "maxCP": 849,
+    "catchRate": 40,
+    "fleeRate": 10,
+    "evolutionMethod": "25 Geodude Candy",
+    "eggDistance": "2km",
+    "quickAttacks": [
+      "Rock Throw",
+      "Tackle"
+    ],
+    "specialAttacks": [
+      "Rock Slide",
+      "Dig",
+      "Rock Tomb"
+    ]
+  },
+  {
+    "id": 75,
+    "name": "Graveler",
+    "types": [
+      "Rock",
+      "Ground"
+    ],
+    "hitPoints": 110,
+    "attack": 142,
+    "defense": 156,
+    "maxCP": 1433,
+    "catchRate": 20,
+    "fleeRate": 7,
+    "evolutionMethod": "100 Geodude Candy",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Rock Throw",
+      "Mud Shot"
+    ],
+    "specialAttacks": [
+      "Rock Slide",
+      "Dig",
+      "Stone Edge"
+    ]
+  },
+  {
+    "id": 76,
+    "name": "Golem",
+    "types": [
+      "Rock",
+      "Ground"
+    ],
+    "hitPoints": 160,
+    "attack": 176,
+    "defense": 198,
+    "maxCP": 2303,
+    "catchRate": 10,
+    "fleeRate": 5,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Rock Throw",
+      "Mud Shot"
+    ],
+    "specialAttacks": [
+      "Ancient Power",
+      "Earthquake",
+      "Stone Edge"
+    ]
+  },
+  {
+    "id": 77,
+    "name": "Ponyta",
+    "types": [
+      "Fire"
+    ],
+    "hitPoints": 100,
+    "attack": 168,
+    "defense": 138,
+    "maxCP": 1516,
+    "catchRate": 32,
+    "fleeRate": 10,
+    "evolutionMethod": "50 Ponyta Candy",
+    "eggDistance": "5km",
+    "quickAttacks": [
+      "Tackle",
+      "Ember"
+    ],
+    "specialAttacks": [
+      "Flame Wheel",
+      "Fire Blast",
+      "Flame Charge"
+    ]
+  },
+  {
+    "id": 78,
+    "name": "Rapidash",
+    "types": [
+      "Fire"
+    ],
+    "hitPoints": 130,
+    "attack": 200,
+    "defense": 170,
+    "maxCP": 2199,
+    "catchRate": 12,
+    "fleeRate": 6,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Low Kick",
+      "Ember"
+    ],
+    "specialAttacks": [
+      "Heat Wave",
+      "Fire Blast",
+      "Drill Run"
+    ]
+  },
+  {
+    "id": 79,
+    "name": "Slowpoke",
+    "types": [
+      "Water",
+      "Psychic"
+    ],
+    "hitPoints": 180,
+    "attack": 110,
+    "defense": 110,
+    "maxCP": 1218,
+    "catchRate": 40,
+    "fleeRate": 10,
+    "evolutionMethod": "50 Slowpoke Candy",
+    "eggDistance": "5km",
+    "quickAttacks": [
+      "Water Gun",
+      "Confusion"
+    ],
+    "specialAttacks": [
+      "Psychic",
+      "Water Pulse",
+      "Psyshock"
+    ]
+  },
+  {
+    "id": 80,
+    "name": "Slowbro",
+    "types": [
+      "Water",
+      "Psychic"
+    ],
+    "hitPoints": 190,
+    "attack": 184,
+    "defense": 198,
+    "maxCP": 2597,
+    "catchRate": 16,
+    "fleeRate": 6,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Water Gun",
+      "Confusion"
+    ],
+    "specialAttacks": [
+      "Psychic",
+      "Water Pulse",
+      "Ice Beam"
+    ]
+  },
+  {
+    "id": 81,
+    "name": "Magnemite",
+    "types": [
+      "Electric",
+      "Steel"
+    ],
+    "hitPoints": 50,
+    "attack": 128,
+    "defense": 138,
+    "maxCP": 890,
+    "catchRate": 40,
+    "fleeRate": 10,
+    "evolutionMethod": "50 Magnemite Candy",
+    "eggDistance": "5km",
+    "quickAttacks": [
+      "Spark",
+      "Thunder Shock"
+    ],
+    "specialAttacks": [
+      "Magnet Bomb",
+      "Discharge",
+      "Thunderbolt"
+    ]
+  },
+  {
+    "id": 82,
+    "name": "Magneton",
+    "types": [
+      "Electric",
+      "Steel"
+    ],
+    "hitPoints": 100,
+    "attack": 186,
+    "defense": 180,
+    "maxCP": 1879,
+    "catchRate": 16,
+    "fleeRate": 6,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Spark",
+      "Thunder Shock"
+    ],
+    "specialAttacks": [
+      "Magnet Bomb",
+      "Discharge",
+      "Flash Cannon"
+    ]
+  },
+  {
+    "id": 83,
+    "name": "Farfetchd",
+    "types": [
+      "Normal",
+      "Flying"
+    ],
+    "hitPoints": 104,
+    "attack": 138,
+    "defense": 132,
+    "maxCP": 1263,
+    "catchRate": 24,
+    "fleeRate": 9,
+    "evolutionMethod": "None",
+    "eggDistance": "5km",
+    "quickAttacks": [
+      "Fury Cutter",
+      "Cut"
+    ],
+    "specialAttacks": [
+      "Air Cutter",
+      "Aerial Ace",
+      "Leaf Blade"
+    ]
+  },
+  {
+    "id": 84,
+    "name": "Doduo",
+    "types": [
+      "Normal",
+      "Flying"
+    ],
+    "hitPoints": 70,
+    "attack": 126,
+    "defense": 96,
+    "maxCP": 855,
+    "catchRate": 40,
+    "fleeRate": 10,
+    "evolutionMethod": "50 Doduo Candy",
+    "eggDistance": "5km",
+    "quickAttacks": [
+      "Peck",
+      "Quick Attack"
+    ],
+    "specialAttacks": [
+      "Swift",
+      "Aerial Ace",
+      "Drill Peck"
+    ]
+  },
+  {
+    "id": 85,
+    "name": "Dodrio",
+    "types": [
+      "Normal",
+      "Flying"
+    ],
+    "hitPoints": 120,
+    "attack": 182,
+    "defense": 150,
+    "maxCP": 1836,
+    "catchRate": 16,
+    "fleeRate": 6,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Steel Wing",
+      "Feint Attack"
+    ],
+    "specialAttacks": [
+      "Drill Peck",
+      "Aerial Ace",
+      "Air Cutter"
+    ]
+  },
+  {
+    "id": 86,
+    "name": "Seel",
+    "types": [
+      "Water"
+    ],
+    "hitPoints": 130,
+    "attack": 104,
+    "defense": 138,
+    "maxCP": 1107,
+    "catchRate": 40,
+    "fleeRate": 9,
+    "evolutionMethod": "50 Seel Candy",
+    "eggDistance": "5km",
+    "quickAttacks": [
+      "Water Gun",
+      "Ice Shard"
+    ],
+    "specialAttacks": [
+      "Aqua Jet",
+      "Icy Wind",
+      "Aqua Tail"
+    ]
+  },
+  {
+    "id": 87,
+    "name": "Dewgong",
+    "types": [
+      "Water",
+      "Ice"
+    ],
+    "hitPoints": 180,
+    "attack": 156,
+    "defense": 192,
+    "maxCP": 2145,
+    "catchRate": 16,
+    "fleeRate": 6,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Frost Breath",
+      "Ice Shard"
+    ],
+    "specialAttacks": [
+      "Aqua Jet",
+      "Icy Wind",
+      "Blizzard"
+    ]
+  },
+  {
+    "id": 88,
+    "name": "Grimer",
+    "types": [
+      "Poison"
+    ],
+    "hitPoints": 160,
+    "attack": 124,
+    "defense": 110,
+    "maxCP": 1284,
+    "catchRate": 40,
+    "fleeRate": 10,
+    "evolutionMethod": "50 Grimer Candy",
+    "eggDistance": "5km",
+    "quickAttacks": [
+      "Mud Slap",
+      "Acid"
+    ],
+    "specialAttacks": [
+      "Sludge",
+      "Sludge Bomb",
+      "Mud Bomb"
+    ]
+  },
+  {
+    "id": 89,
+    "name": "Muk",
+    "types": [
+      "Poison"
+    ],
+    "hitPoints": 210,
+    "attack": 180,
+    "defense": 188,
+    "maxCP": 2602,
+    "catchRate": 16,
+    "fleeRate": 6,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Poison Jab",
+      "Acid"
+    ],
+    "specialAttacks": [
+      "Sludge Wave",
+      "Sludge Bomb",
+      "Dark Pulse"
+    ]
+  },
+  {
+    "id": 90,
+    "name": "Shellder",
+    "types": [
+      "Water"
+    ],
+    "hitPoints": 60,
+    "attack": 120,
+    "defense": 112,
+    "maxCP": 822,
+    "catchRate": 40,
+    "fleeRate": 10,
+    "evolutionMethod": "50 Shellder Candy",
+    "eggDistance": "5km",
+    "quickAttacks": [
+      "Ice Shard",
+      "Tackle"
+    ],
+    "specialAttacks": [
+      "Icy Wind",
+      "Water Pulse",
+      "Bubble Beam"
+    ]
+  },
+  {
+    "id": 91,
+    "name": "Cloyster",
+    "types": [
+      "Water",
+      "Ice"
+    ],
+    "hitPoints": 100,
+    "attack": 196,
+    "defense": 196,
+    "maxCP": 2052,
+    "catchRate": 16,
+    "fleeRate": 6,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Ice Shard",
+      "Frost Breath"
+    ],
+    "specialAttacks": [
+      "Icy Wind",
+      "Blizzard",
+      "Hydro Pump"
+    ]
+  },
+  {
+    "id": 92,
+    "name": "Gastly",
+    "types": [
+      "Ghost",
+      "Poison"
+    ],
+    "hitPoints": 60,
+    "attack": 136,
+    "defense": 82,
+    "maxCP": 804,
+    "catchRate": 32,
+    "fleeRate": 10,
+    "evolutionMethod": "25 Gastly Candy",
+    "eggDistance": "5km",
+    "quickAttacks": [
+      "Lick",
+      "Sucker Punch"
+    ],
+    "specialAttacks": [
+      "Dark Pulse",
+      "Sludge Bomb",
+      "Ominous Wind"
+    ]
+  },
+  {
+    "id": 93,
+    "name": "Haunter",
+    "types": [
+      "Ghost",
+      "Poison"
+    ],
+    "hitPoints": 90,
+    "attack": 172,
+    "defense": 118,
+    "maxCP": 1380,
+    "catchRate": 16,
+    "fleeRate": 7,
+    "evolutionMethod": "100 Gastly Candy",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Lick",
+      "Shadow Claw"
+    ],
+    "specialAttacks": [
+      "Dark Pulse",
+      "Sludge Bomb",
+      "Shadow Ball"
+    ]
+  },
+  {
+    "id": 94,
+    "name": "Gengar",
+    "types": [
+      "Ghost",
+      "Poison"
+    ],
+    "hitPoints": 120,
+    "attack": 204,
+    "defense": 156,
+    "maxCP": 2078,
+    "catchRate": 8,
+    "fleeRate": 5,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Shadow Claw",
+      "Sucker Punch"
+    ],
+    "specialAttacks": [
+      "Dark Pulse",
+      "Sludge Wave",
+      "Shadow Ball"
+    ]
+  },
+  {
+    "id": 95,
+    "name": "Onix",
+    "types": [
+      "Rock",
+      "Ground"
+    ],
+    "hitPoints": 70,
+    "attack": 90,
+    "defense": 186,
+    "maxCP": 857,
+    "catchRate": 16,
+    "fleeRate": 9,
+    "evolutionMethod": "None",
+    "eggDistance": "10km",
+    "quickAttacks": [
+      "Rock Throw",
+      "Tackle"
+    ],
+    "specialAttacks": [
+      "Rock Slide",
+      "Stone Edge",
+      "Iron Head"
+    ]
+  },
+  {
+    "id": 96,
+    "name": "Drowzee",
+    "types": [
+      "Psychic"
+    ],
+    "hitPoints": 120,
+    "attack": 104,
+    "defense": 140,
+    "maxCP": 1075,
+    "catchRate": 40,
+    "fleeRate": 10,
+    "evolutionMethod": "50 Drowzee Candy",
+    "eggDistance": "5km",
+    "quickAttacks": [
+      "Pound",
+      "Confusion"
+    ],
+    "specialAttacks": [
+      "Psychic",
+      "Psyshock",
+      "Psybeam"
+    ]
+  },
+  {
+    "id": 97,
+    "name": "Hypno",
+    "types": [
+      "Psychic"
+    ],
+    "hitPoints": 170,
+    "attack": 162,
+    "defense": 196,
+    "maxCP": 2184,
+    "catchRate": 16,
+    "fleeRate": 6,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Zen Headbutt",
+      "Confusion"
+    ],
+    "specialAttacks": [
+      "Psychic",
+      "Psyshock",
+      "Shadow Ball"
+    ]
+  },
+  {
+    "id": 98,
+    "name": "Krabby",
+    "types": [
+      "Water"
+    ],
+    "hitPoints": 60,
+    "attack": 116,
+    "defense": 110,
+    "maxCP": 792,
+    "catchRate": 40,
+    "fleeRate": 15,
+    "evolutionMethod": "50 Krabby Candy",
+    "eggDistance": "5km",
+    "quickAttacks": [
+      "Bubble",
+      "Mud Shot"
+    ],
+    "specialAttacks": [
+      "Vice Grip",
+      "Water Pulse",
+      "Bubble Beam"
+    ]
+  },
+  {
+    "id": 99,
+    "name": "Kingler",
+    "types": [
+      "Water"
+    ],
+    "hitPoints": 110,
+    "attack": 178,
+    "defense": 168,
+    "maxCP": 1823,
+    "catchRate": 16,
+    "fleeRate": 7,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Metal Claw",
+      "Mud Shot"
+    ],
+    "specialAttacks": [
+      "Vice Grip",
+      "Water Pulse",
+      "X-Scissor"
+    ]
+  },
+  {
+    "id": 100,
+    "name": "Voltorb",
+    "types": [
+      "Electric"
+    ],
+    "hitPoints": 80,
+    "attack": 102,
+    "defense": 124,
+    "maxCP": 839,
+    "catchRate": 40,
+    "fleeRate": 10,
+    "evolutionMethod": "50 Voltorb Candy",
+    "eggDistance": "5km",
+    "quickAttacks": [
+      "Tackle",
+      "Spark"
+    ],
+    "specialAttacks": [
+      "Thunderbolt",
+      "Discharge",
+      "Signal Beam"
+    ]
+  },
+  {
+    "id": 101,
+    "name": "Electrode",
+    "types": [
+      "Electric"
+    ],
+    "hitPoints": 120,
+    "attack": 150,
+    "defense": 174,
+    "maxCP": 1646,
+    "catchRate": 16,
+    "fleeRate": 6,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Tackle",
+      "Spark"
+    ],
+    "specialAttacks": [
+      "Thunderbolt",
+      "Discharge",
+      "Hyper Beam"
+    ]
+  },
+  {
+    "id": 102,
+    "name": "Exeggcute",
+    "types": [
+      "Grass",
+      "Psychic"
+    ],
+    "hitPoints": 120,
+    "attack": 110,
+    "defense": 132,
+    "maxCP": 1099,
+    "catchRate": 40,
+    "fleeRate": 10,
+    "evolutionMethod": "50 Exeggcute Candy",
+    "eggDistance": "5km",
+    "quickAttacks": [
+      "Confusion"
+    ],
+    "specialAttacks": [
+      "Psychic",
+      "Seed Bomb",
+      "Ancient Power"
+    ]
+  },
+  {
+    "id": 103,
+    "name": "Exeggutor",
+    "types": [
+      "Grass",
+      "Psychic"
+    ],
+    "hitPoints": 190,
+    "attack": 232,
+    "defense": 164,
+    "maxCP": 2955,
+    "catchRate": 16,
+    "fleeRate": 6,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Confusion",
+      "Zen Headbutt"
+    ],
+    "specialAttacks": [
+      "Psychic",
+      "Seed Bomb",
+      "Solar Beam"
+    ]
+  },
+  {
+    "id": 104,
+    "name": "Cubone",
+    "types": [
+      "Ground"
+    ],
+    "hitPoints": 100,
+    "attack": 102,
+    "defense": 150,
+    "maxCP": 1006,
+    "catchRate": 32,
+    "fleeRate": 10,
+    "evolutionMethod": "50 Cubone Candy",
+    "eggDistance": "5km",
+    "quickAttacks": [
+      "Rock Smash",
+      "Mud Slap"
+    ],
+    "specialAttacks": [
+      "Bone Club",
+      "Dig",
+      "Bulldoze"
+    ]
+  },
+  {
+    "id": 105,
+    "name": "Marowak",
+    "types": [
+      "Ground"
+    ],
+    "hitPoints": 120,
+    "attack": 140,
+    "defense": 202,
+    "maxCP": 1656,
+    "catchRate": 12,
+    "fleeRate": 6,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Rock Smash",
+      "Mud Slap"
+    ],
+    "specialAttacks": [
+      "Bone Club",
+      "Dig",
+      "Earthquake"
+    ]
+  },
+  {
+    "id": 106,
+    "name": "Hitmonlee",
+    "types": [
+      "Fighting"
+    ],
+    "hitPoints": 100,
+    "attack": 148,
+    "defense": 172,
+    "maxCP": 1492,
+    "catchRate": 16,
+    "fleeRate": 9,
+    "evolutionMethod": "None",
+    "eggDistance": "10km",
+    "quickAttacks": [
+      "Low Kick",
+      "Rock Smash"
+    ],
+    "specialAttacks": [
+      "Low Sweep",
+      "Stone Edge",
+      "Stomp"
+    ]
+  },
+  {
+    "id": 107,
+    "name": "Hitmonchan",
+    "types": [
+      "Fighting"
+    ],
+    "hitPoints": 100,
+    "attack": 138,
+    "defense": 204,
+    "maxCP": 1516,
+    "catchRate": 16,
+    "fleeRate": 9,
+    "evolutionMethod": "None",
+    "eggDistance": "10km",
+    "quickAttacks": [
+      "Bullet Punch",
+      "Rock Smash"
+    ],
+    "specialAttacks": [
+      "Fire Punch",
+      "Ice Punch",
+      "Thunder Punch",
+      "Brick Break"
+    ]
+  },
+  {
+    "id": 108,
+    "name": "Lickitung",
+    "types": [
+      "Normal"
+    ],
+    "hitPoints": 180,
+    "attack": 126,
+    "defense": 160,
+    "maxCP": 1626,
+    "catchRate": 16,
+    "fleeRate": 9,
+    "evolutionMethod": "None",
+    "eggDistance": "5km",
+    "quickAttacks": [
+      "Lick",
+      "Zen Headbutt"
+    ],
+    "specialAttacks": [
+      "Hyper Beam",
+      "Stomp",
+      "Power Whip"
+    ]
+  },
+  {
+    "id": 109,
+    "name": "Koffing",
+    "types": [
+      "Poison"
+    ],
+    "hitPoints": 80,
+    "attack": 136,
+    "defense": 142,
+    "maxCP": 1151,
+    "catchRate": 40,
+    "fleeRate": 10,
+    "evolutionMethod": "50 Koffing Candy",
+    "eggDistance": "5km",
+    "quickAttacks": [
+      "Tackle",
+      "Acid"
+    ],
+    "specialAttacks": [
+      "Dark Pulse",
+      "Sludge",
+      "Sludge Bomb"
+    ]
+  },
+  {
+    "id": 110,
+    "name": "Weezing",
+    "types": [
+      "Poison"
+    ],
+    "hitPoints": 130,
+    "attack": 190,
+    "defense": 198,
+    "maxCP": 2250,
+    "catchRate": 16,
+    "fleeRate": 6,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Tackle",
+      "Acid"
+    ],
+    "specialAttacks": [
+      "Dark Pulse",
+      "Shadow Ball",
+      "Sludge Bomb"
+    ]
+  },
+  {
+    "id": 111,
+    "name": "Rhyhorn",
+    "types": [
+      "Ground",
+      "Rock"
+    ],
+    "hitPoints": 160,
+    "attack": 110,
+    "defense": 116,
+    "maxCP": 1182,
+    "catchRate": 40,
+    "fleeRate": 10,
+    "evolutionMethod": "50 Rhyhorn Candy",
+    "eggDistance": "5km",
+    "quickAttacks": [
+      "Rock Smash",
+      "Mud Slap"
+    ],
+    "specialAttacks": [
+      "Bulldoze",
+      "Stomp",
+      "Horn Attack"
+    ]
+  },
+  {
+    "id": 112,
+    "name": "Rhydon",
+    "types": [
+      "Ground",
+      "Rock"
+    ],
+    "hitPoints": 210,
+    "attack": 116,
+    "defense": 160,
+    "maxCP": 2243,
+    "catchRate": 16,
+    "fleeRate": 6,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Rock Smash",
+      "Mud Slap"
+    ],
+    "specialAttacks": [
+      "Earthquake",
+      "Stone Edge",
+      "Megahorn"
+    ]
+  },
+  {
+    "id": 113,
+    "name": "Chansey",
+    "types": [
+      "Normal"
+    ],
+    "hitPoints": 500,
+    "attack": 40,
+    "defense": 60,
+    "maxCP": 675,
+    "catchRate": 16,
+    "fleeRate": 9,
+    "evolutionMethod": "None",
+    "eggDistance": "10km",
+    "quickAttacks": [
+      "Pound",
+      "Zen Headbutt"
+    ],
+    "specialAttacks": [
+      "Dazzling Gleam",
+      "Psybeam",
+      "Psychic"
+    ]
+  },
+  {
+    "id": 114,
+    "name": "Tangela",
+    "types": [
+      "Grass"
+    ],
+    "hitPoints": 130,
+    "attack": 164,
+    "defense": 152,
+    "maxCP": 1739,
+    "catchRate": 32,
+    "fleeRate": 9,
+    "evolutionMethod": "None",
+    "eggDistance": "5km",
+    "quickAttacks": [
+      "Vine Whip"
+    ],
+    "specialAttacks": [
+      "Sludge Bomb",
+      "Solar Beam",
+      "Power Whip"
+    ]
+  },
+  {
+    "id": 115,
+    "name": "Kangaskhan",
+    "types": [
+      "Normal"
+    ],
+    "hitPoints": 210,
+    "attack": 142,
+    "defense": 178,
+    "maxCP": 2043,
+    "catchRate": 16,
+    "fleeRate": 9,
+    "evolutionMethod": "None",
+    "eggDistance": "5km",
+    "quickAttacks": [
+      "Low Kick",
+      "Mud Slap"
+    ],
+    "specialAttacks": [
+      "Earthquake",
+      "Brick Break",
+      "Stomp"
+    ]
+  },
+  {
+    "id": 116,
+    "name": "Horsea",
+    "types": [
+      "Water"
+    ],
+    "hitPoints": 60,
+    "attack": 122,
+    "defense": 100,
+    "maxCP": 794,
+    "catchRate": 40,
+    "fleeRate": 10,
+    "evolutionMethod": "50 Horsea Candy",
+    "eggDistance": "5km",
+    "quickAttacks": [
+      "Water Gun",
+      "Bubble"
+    ],
+    "specialAttacks": [
+      "Bubble Beam",
+      "Dragon Pulse",
+      "Flash Cannon"
+    ]
+  },
+  {
+    "id": 117,
+    "name": "Seadra",
+    "types": [
+      "Water"
+    ],
+    "hitPoints": 110,
+    "attack": 176,
+    "defense": 150,
+    "maxCP": 1713,
+    "catchRate": 16,
+    "fleeRate": 6,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Water Gun",
+      "Dragon Breath"
+    ],
+    "specialAttacks": [
+      "Hydro Pump",
+      "Dragon Pulse",
+      "Blizzard"
+    ]
+  },
+  {
+    "id": 118,
+    "name": "Goldeen",
+    "types": [
+      "Water"
+    ],
+    "hitPoints": 90,
+    "attack": 112,
+    "defense": 126,
+    "maxCP": 965,
+    "catchRate": 40,
+    "fleeRate": 15,
+    "evolutionMethod": "50 Goldeen Candy",
+    "eggDistance": "5km",
+    "quickAttacks": [
+      "Mud Shot",
+      "Peck"
+    ],
+    "specialAttacks": [
+      "Aqua Tail",
+      "Horn Attack",
+      "Water Pulse"
+    ]
+  },
+  {
+    "id": 119,
+    "name": "Seaking",
+    "types": [
+      "Water"
+    ],
+    "hitPoints": 160,
+    "attack": 172,
+    "defense": 160,
+    "maxCP": 2043,
+    "catchRate": 16,
+    "fleeRate": 7,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Poison Jab",
+      "Peck"
+    ],
+    "specialAttacks": [
+      "Drill Run",
+      "Megahorn",
+      "Icy Wind"
+    ]
+  },
+  {
+    "id": 120,
+    "name": "Staryu",
+    "types": [
+      "Water"
+    ],
+    "hitPoints": 60,
+    "attack": 130,
+    "defense": 128,
+    "maxCP": 937,
+    "catchRate": 40,
+    "fleeRate": 15,
+    "evolutionMethod": "50 Staryu Candy",
+    "eggDistance": "5km",
+    "quickAttacks": [
+      "Water Gun",
+      "Quick Attack"
+    ],
+    "specialAttacks": [
+      "Bubble Beam",
+      "Power Gem",
+      "Swift"
+    ]
+  },
+  {
+    "id": 121,
+    "name": "Starmie",
+    "types": [
+      "Water",
+      "Psychic"
+    ],
+    "hitPoints": 120,
+    "attack": 194,
+    "defense": 192,
+    "maxCP": 2182,
+    "catchRate": 16,
+    "fleeRate": 6,
+    "evolutionMethod": "None",
+    "eggDistance": "Not in Eggs",
+    "quickAttacks": [
+      "Water Gun",
+      "Quick Attack"
+    ],
+    "specialAttacks": [
+      "Hydro Pump",
+      "Power Gem",
+      "Psybeam"
+    ]
+  },
+  {
+    "id": 122,
+    "name": "Mr. Mime",
+    "types": [
+      "Psychic",
+      "Fairy"
+    ],
+    "hitPoints": 80,
+    "attack": 154,
+    "defense": 196,
+    "maxCP": 1494,
+    "catchRate": 24,
+    "fleeRate": 9,
+    "evolutionMethod": "None",
+    "eggDistance": "10km",
+    "quickAttacks": [
+      "Confusion",
+      "Zen Headbutt"
+    ],
+    "specialAttacks": [
+      "Shadow Ball",
+      "Psybeam",
+      "Psychic"
+    ]
+  },
+  {
+    "id": 123,
+    "name": "Scyther",
+    "types": [
+      "Bug",
+      "Flying"
+    ],
+    "hitPoints": 140,
+    "attack": 176,
+    "defense": 180,
+    "maxCP": 2073,
+    "catchRate": 24,
+    "fleeRate": 9,
+    "evolutionMethod": "None",
+    "eggDistance": "10km",
+    "quickAttacks": [
+      "Steel Wing",
+      "Fury Cutter"
+    ],
+    "specialAttacks": [
+      "Bug Buzz",
+      "X-Scissor",
+      "Night Slash"
+    ]
+  },
+  {
+    "id": 124,
+    "name": "Jynx",
+    "types": [
+      "Ice",
+      "Psychic"
+    ],
+    "hitPoints": 130,
+    "attack": 172,
+    "defense": 134,
+    "maxCP": 1716,
+    "catchRate": 24,
+    "fleeRate": 9,
+    "evolutionMethod": "None",
+    "eggDistance": "10km",
+    "quickAttacks": [
+      "Pound",
+      "Frost Breath"
+    ],
+    "specialAttacks": [
+      "Psyshock",
+      "Ice Punch",
+      "Draining Kiss"
+    ]
+  }
+]

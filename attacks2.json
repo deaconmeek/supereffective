@@ -1,0 +1,2102 @@
+[
+  {
+    "name": "Acid",
+    "type": "Poison",
+    "damage": 10,
+    "energyIncrease": 7,
+    "duration": 1.05,
+    "bars": null,
+    "knownBy": [
+      "Ekans",
+      "Arbok",
+      "Oddish",
+      "Gloom",
+      "Vileplume",
+      "Bellsprout",
+      "Weepinbell",
+      "Victreebel",
+      "Tentacruel",
+      "Grimer",
+      "Muk",
+      "Koffing",
+      "Weezing"
+    ],
+    "attackType": "quick"
+  },
+  {
+    "name": "Bite",
+    "type": "Dark",
+    "damage": 6,
+    "energyIncrease": 7,
+    "duration": 0.5,
+    "bars": null,
+    "knownBy": [
+      "Wartortle",
+      "Blastoise",
+      "Raticate",
+      "Arbok",
+      "Nidoran♀",
+      "Nidorina",
+      "Nidoqueen",
+      "Nidorino",
+      "Zubat",
+      "Golbat",
+      "Meowth",
+      "Growlithe",
+      "Arcanine",
+      "Gyarados",
+      "Aerodactyl"
+    ],
+    "attackType": "quick"
+  },
+  {
+    "name": "Bubble",
+    "type": "Water",
+    "damage": 15,
+    "energyIncrease": 15,
+    "duration": 2.3,
+    "bars": null,
+    "knownBy": [
+      "Squirtle",
+      "Poliwag",
+      "Poliwhirl",
+      "Poliwrath",
+      "Tentacool",
+      "Krabby",
+      "Horsea"
+    ],
+    "attackType": "quick"
+  },
+  {
+    "name": "Bug Bite",
+    "type": "Bug",
+    "damage": 6,
+    "energyIncrease": 7,
+    "duration": 0.45,
+    "bars": null,
+    "knownBy": [
+      "Caterpie",
+      "Metapod",
+      "Butterfree",
+      "Weedle",
+      "Kakuna",
+      "Beedrill",
+      "Paras",
+      "Parasect",
+      "Venonat",
+      "Venomoth"
+    ],
+    "attackType": "quick"
+  },
+  {
+    "name": "Bullet Punch",
+    "type": "Steel",
+    "damage": 10,
+    "energyIncrease": 7,
+    "duration": 1.2,
+    "bars": null,
+    "knownBy": [
+      "Machamp",
+      "Hitmonchan"
+    ],
+    "attackType": "quick"
+  },
+  {
+    "name": "Confusion",
+    "type": "Psychic",
+    "damage": 12,
+    "energyIncrease": 7,
+    "duration": 1.51,
+    "bars": null,
+    "knownBy": [
+      "Butterfree",
+      "Venonat",
+      "Venomoth",
+      "Golduck",
+      "Kadabra",
+      "Alakazam",
+      "Slowpoke",
+      "Slowbro",
+      "Drowzee",
+      "Hypno",
+      "Exeggcute",
+      "Exeggutor",
+      "Mr. Mime",
+      "Mewtwo"
+    ],
+    "attackType": "quick"
+  },
+  {
+    "name": "Cut",
+    "type": "Normal",
+    "damage": 12,
+    "energyIncrease": 7,
+    "duration": 1.13,
+    "bars": null,
+    "knownBy": [
+      "Farfetchd"
+    ],
+    "attackType": "quick"
+  },
+  {
+    "name": "Dragon Breath",
+    "type": "Dragon",
+    "damage": 6,
+    "energyIncrease": 7,
+    "duration": 0.5,
+    "bars": null,
+    "knownBy": [
+      "Seadra",
+      "Gyarados",
+      "Dratini",
+      "Dragonair",
+      "Dragonite"
+    ],
+    "attackType": "quick"
+  },
+  {
+    "name": "Ember",
+    "type": "Fire",
+    "damage": 10,
+    "energyIncrease": 7,
+    "duration": 1.05,
+    "bars": null,
+    "knownBy": [
+      "Charmander",
+      "Charmeleon",
+      "Charizard",
+      "Vulpix",
+      "Ninetales",
+      "Growlithe",
+      "Ponyta",
+      "Rapidash",
+      "Magmar",
+      "Flareon",
+      "Moltres"
+    ],
+    "attackType": "quick"
+  },
+  {
+    "name": "Feint Attack",
+    "type": "Dark",
+    "damage": 12,
+    "energyIncrease": 7,
+    "duration": 1.04,
+    "bars": null,
+    "knownBy": [
+      "Ninetales",
+      "Jigglypuff",
+      "Wigglytuff",
+      "Persian",
+      "Dodrio"
+    ],
+    "attackType": "quick"
+  },
+  {
+    "name": "Fire Fang",
+    "type": "Fire",
+    "damage": 7,
+    "energyIncrease": 4,
+    "duration": 0.84,
+    "bars": null,
+    "knownBy": [
+      "Arcanine"
+    ],
+    "attackType": "quick"
+  },
+  {
+    "name": "Frost Breath",
+    "type": "Ice",
+    "damage": 12,
+    "energyIncrease": 7,
+    "duration": 0.81,
+    "bars": null,
+    "knownBy": [
+      "Dewgong",
+      "Cloyster",
+      "Jynx",
+      "Lapras",
+      "Articuno"
+    ],
+    "attackType": "quick"
+  },
+  {
+    "name": "Fury Cutter",
+    "type": "Bug",
+    "damage": 3,
+    "energyIncrease": 12,
+    "duration": 0.4,
+    "bars": null,
+    "knownBy": [
+      "Nidoking",
+      "Parasect",
+      "Farfetchd",
+      "Scyther",
+      "Pinsir",
+      "Kabutops"
+    ],
+    "attackType": "quick"
+  },
+  {
+    "name": "Ice Shard",
+    "type": "Ice",
+    "damage": 10,
+    "energyIncrease": 7,
+    "duration": 1.4,
+    "bars": null,
+    "knownBy": [
+      "Seel",
+      "Dewgong",
+      "Shellder",
+      "Cloyster",
+      "Lapras"
+    ],
+    "attackType": "quick"
+  },
+  {
+    "name": "Karate Chop",
+    "type": "Fighting",
+    "damage": 6,
+    "energyIncrease": 7,
+    "duration": 0.8,
+    "bars": null,
+    "knownBy": [
+      "Mankey",
+      "Primeape",
+      "Machop",
+      "Machoke",
+      "Machamp",
+      "Magmar"
+    ],
+    "attackType": "quick"
+  },
+  {
+    "name": "Lick",
+    "type": "Ghost",
+    "damage": 10,
+    "energyIncrease": 7,
+    "duration": 0.5,
+    "bars": null,
+    "knownBy": [
+      "Gastly",
+      "Haunter",
+      "Lickitung",
+      "Snorlax"
+    ],
+    "attackType": "quick"
+  },
+  {
+    "name": "Low Kick",
+    "type": "Fighting",
+    "damage": 5,
+    "energyIncrease": 7,
+    "duration": 0.6,
+    "bars": null,
+    "knownBy": [
+      "Primeape",
+      "Machop",
+      "Machoke",
+      "Rapidash",
+      "Hitmonlee",
+      "Kangaskhan",
+      "Electabuzz"
+    ],
+    "attackType": "quick"
+  },
+  {
+    "name": "Metal Claw",
+    "type": "Steel",
+    "damage": 12,
+    "energyIncrease": 7,
+    "duration": 0.63,
+    "bars": null,
+    "knownBy": [
+      "Sandslash",
+      "Kingler"
+    ],
+    "attackType": "quick"
+  },
+  {
+    "name": "Mud Shot",
+    "type": "Ground",
+    "damage": 12,
+    "energyIncrease": 7,
+    "duration": 0.55,
+    "bars": null,
+    "knownBy": [
+      "Sandshrew",
+      "Sandslash",
+      "Diglett",
+      "Dugtrio",
+      "Poliwag",
+      "Poliwhirl",
+      "Poliwrath",
+      "Graveler",
+      "Golem",
+      "Krabby",
+      "Kingler",
+      "Goldeen",
+      "Omanyte",
+      "Kabuto",
+      "Kabutops"
+    ],
+    "attackType": "quick"
+  },
+  {
+    "name": "Mud Slap",
+    "type": "Ground",
+    "damage": 6,
+    "energyIncrease": 9,
+    "duration": 1.35,
+    "bars": null,
+    "knownBy": [
+      "Grimer",
+      "Cubone",
+      "Marowak",
+      "Rhyhorn",
+      "Rhydon",
+      "Kangaskhan"
+    ],
+    "attackType": "quick"
+  },
+  {
+    "name": "Peck",
+    "type": "Flying",
+    "damage": 10,
+    "energyIncrease": 10,
+    "duration": 1.15,
+    "bars": null,
+    "knownBy": [
+      "Spearow",
+      "Fearow",
+      "Nidoran♂",
+      "Doduo",
+      "Goldeen",
+      "Seaking"
+    ],
+    "attackType": "quick"
+  },
+  {
+    "name": "Poison Jab",
+    "type": "Poison",
+    "damage": 15,
+    "energyIncrease": 7,
+    "duration": 1.05,
+    "bars": null,
+    "knownBy": [
+      "Beedrill",
+      "Nidoqueen",
+      "Nidorino",
+      "Nidoking",
+      "Tentacruel",
+      "Muk",
+      "Seaking"
+    ],
+    "attackType": "quick"
+  },
+  {
+    "name": "Poison Sting",
+    "type": "Poison",
+    "damage": 6,
+    "energyIncrease": 4,
+    "duration": 0.575,
+    "bars": null,
+    "knownBy": [
+      "Weedle",
+      "Kakuna",
+      "Ekans",
+      "Nidoran♀",
+      "Nidorina",
+      "Nidoran♂",
+      "Tentacool"
+    ],
+    "attackType": "quick"
+  },
+  {
+    "name": "Pound",
+    "type": "Normal",
+    "damage": 8,
+    "energyIncrease": 7,
+    "duration": 0.54,
+    "bars": null,
+    "knownBy": [
+      "Clefairy",
+      "Clefable",
+      "Jigglypuff",
+      "Wigglytuff",
+      "Drowzee",
+      "Chansey",
+      "Jynx",
+      "Ditto",
+      "Mew"
+    ],
+    "attackType": "quick"
+  },
+  {
+    "name": "Psycho Cut",
+    "type": "Psychic",
+    "damage": 15,
+    "energyIncrease": 7,
+    "duration": 0.57,
+    "bars": null,
+    "knownBy": [
+      "Kadabra",
+      "Alakazam",
+      "Mewtwo"
+    ],
+    "attackType": "quick"
+  },
+  {
+    "name": "Quick Attack",
+    "type": "Normal",
+    "damage": 10,
+    "energyIncrease": 7,
+    "duration": 1.33,
+    "bars": null,
+    "knownBy": [
+      "Pidgey",
+      "Rattata",
+      "Raticate",
+      "Spearow",
+      "Pikachu",
+      "Vulpix",
+      "Zubat",
+      "Doduo",
+      "Staryu",
+      "Starmie",
+      "Eevee",
+      "Porygon"
+    ],
+    "attackType": "quick"
+  },
+  {
+    "name": "Razor Leaf",
+    "type": "Grass",
+    "damage": 15,
+    "energyIncrease": 7,
+    "duration": 1.45,
+    "bars": null,
+    "knownBy": [
+      "Ivysaur",
+      "Venusaur",
+      "Oddish",
+      "Gloom",
+      "Vileplume",
+      "Weepinbell",
+      "Victreebel"
+    ],
+    "attackType": "quick"
+  },
+  {
+    "name": "Rock Smash",
+    "type": "Fighting",
+    "damage": 5,
+    "energyIncrease": 7,
+    "duration": 1.41,
+    "bars": null,
+    "knownBy": [
+      "Cubone",
+      "Marowak",
+      "Hitmonlee",
+      "Hitmonchan",
+      "Rhyhorn",
+      "Rhydon",
+      "Pinsir"
+    ],
+    "attackType": "quick"
+  },
+  {
+    "name": "Rock Throw",
+    "type": "Rock",
+    "damage": 12,
+    "energyIncrease": 7,
+    "duration": 1.36,
+    "bars": null,
+    "knownBy": [
+      "Geodude",
+      "Graveler",
+      "Golem",
+      "Onix",
+      "Omastar"
+    ],
+    "attackType": "quick"
+  },
+  {
+    "name": "Scratch",
+    "type": "Normal",
+    "damage": 10,
+    "energyIncrease": 7,
+    "duration": 0.5,
+    "bars": null,
+    "knownBy": [
+      "Charmander",
+      "Charmeleon",
+      "Sandshrew",
+      "Paras",
+      "Diglett",
+      "Meowth",
+      "Persian",
+      "Mankey",
+      "Kabuto"
+    ],
+    "attackType": "quick"
+  },
+  {
+    "name": "Shadow Claw",
+    "type": "Ghost",
+    "damage": 16,
+    "energyIncrease": 7,
+    "duration": 0.95,
+    "bars": null,
+    "knownBy": [
+      "Haunter",
+      "Gengar"
+    ],
+    "attackType": "quick"
+  },
+  {
+    "name": "Spark",
+    "type": "Electric",
+    "damage": 7,
+    "energyIncrease": 4,
+    "duration": 0.7,
+    "bars": null,
+    "knownBy": [
+      "Raichu",
+      "Magnemite",
+      "Magneton",
+      "Voltorb",
+      "Electrode"
+    ],
+    "attackType": "quick"
+  },
+  {
+    "name": "Splash",
+    "type": "Water",
+    "damage": 0,
+    "energyIncrease": 7,
+    "duration": 1.23,
+    "bars": null,
+    "knownBy": [
+      "Magikarp"
+    ],
+    "attackType": "quick"
+  },
+  {
+    "name": "Steel Wing",
+    "type": "Steel",
+    "damage": 15,
+    "energyIncrease": 4,
+    "duration": 1.33,
+    "bars": null,
+    "knownBy": [
+      "Pidgeotto",
+      "Pidgeot",
+      "Fearow",
+      "Dodrio",
+      "Scyther",
+      "Aerodactyl",
+      "Dragonite"
+    ],
+    "attackType": "quick"
+  },
+  {
+    "name": "Sucker Punch",
+    "type": "Dark",
+    "damage": 7,
+    "energyIncrease": 4,
+    "duration": 0.7,
+    "bars": null,
+    "knownBy": [
+      "Dugtrio",
+      "Gastly",
+      "Gengar"
+    ],
+    "attackType": "quick"
+  },
+  {
+    "name": "Tackle",
+    "type": "Normal",
+    "damage": 12,
+    "energyIncrease": 7,
+    "duration": 1.1,
+    "bars": null,
+    "knownBy": [
+      "Bulbasaur",
+      "Squirtle",
+      "Caterpie",
+      "Metapod",
+      "Pidgey",
+      "Rattata",
+      "Geodude",
+      "Ponyta",
+      "Shellder",
+      "Onix",
+      "Voltorb",
+      "Electrode",
+      "Koffing",
+      "Weezing",
+      "Tauros",
+      "Eevee",
+      "Porygon"
+    ],
+    "attackType": "quick"
+  },
+  {
+    "name": "Thunder Shock",
+    "type": "Electric",
+    "damage": 5,
+    "energyIncrease": 7,
+    "duration": 0.6,
+    "bars": null,
+    "knownBy": [
+      "Pikachu",
+      "Raichu",
+      "Magnemite",
+      "Magneton",
+      "Electabuzz",
+      "Jolteon",
+      "Zapdos"
+    ],
+    "attackType": "quick"
+  },
+  {
+    "name": "Vine Whip",
+    "type": "Grass",
+    "damage": 10,
+    "energyIncrease": 7,
+    "duration": 0.65,
+    "bars": null,
+    "knownBy": [
+      "Bulbasaur",
+      "Ivysaur",
+      "Venusaur",
+      "Bellsprout",
+      "Tangela"
+    ],
+    "attackType": "quick"
+  },
+  {
+    "name": "Water Gun",
+    "type": "Water",
+    "damage": 10,
+    "energyIncrease": 7,
+    "duration": 0.5,
+    "bars": null,
+    "knownBy": [
+      "Wartortle",
+      "Blastoise",
+      "Psyduck",
+      "Golduck",
+      "Slowpoke",
+      "Slowbro",
+      "Seel",
+      "Horsea",
+      "Seadra",
+      "Staryu",
+      "Starmie",
+      "Vaporeon",
+      "Omanyte",
+      "Omastar"
+    ],
+    "attackType": "quick"
+  },
+  {
+    "name": "Wing Attack",
+    "type": "Flying",
+    "damage": 12,
+    "energyIncrease": 7,
+    "duration": 0.75,
+    "bars": null,
+    "knownBy": [
+      "Charizard",
+      "Pidgeotto",
+      "Pidgeot",
+      "Golbat"
+    ],
+    "attackType": "quick"
+  },
+  {
+    "name": "Zen Headbutt",
+    "type": "Psychic",
+    "damage": 15,
+    "energyIncrease": 4,
+    "duration": 1.05,
+    "bars": null,
+    "knownBy": [
+      "Clefairy",
+      "Clefable",
+      "Psyduck",
+      "Abra",
+      "Hypno",
+      "Exeggutor",
+      "Lickitung",
+      "Chansey",
+      "Mr. Mime",
+      "Tauros",
+      "Snorlax"
+    ],
+    "attackType": "quick"
+  },
+  {
+    "name": "Aerial Ace",
+    "type": "Flying",
+    "damage": 25,
+    "energyIncrease": 0.05,
+    "duration": 2.9,
+    "bars": 4,
+    "knownBy": [
+      "Beedrill",
+      "Pidgey",
+      "Pidgeotto",
+      "Pidgeot",
+      "Spearow",
+      "Fearow",
+      "Farfetchd",
+      "Doduo",
+      "Dodrio"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Air Cutter",
+    "type": "Flying",
+    "damage": 25,
+    "energyIncrease": 0.25,
+    "duration": 3.3,
+    "bars": 4,
+    "knownBy": [
+      "Pidgey",
+      "Pidgeotto",
+      "Pidgeot",
+      "Zubat",
+      "Golbat",
+      "Farfetchd",
+      "Dodrio"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Ancient Power",
+    "type": "Rock",
+    "damage": 30,
+    "energyIncrease": 0.05,
+    "duration": 3.6,
+    "bars": 4,
+    "knownBy": [
+      "Golem",
+      "Exeggcute",
+      "Omanyte",
+      "Omastar",
+      "Kabuto",
+      "Kabutops",
+      "Aerodactyl"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Aqua Jet",
+    "type": "Water",
+    "damage": 15,
+    "energyIncrease": 0.05,
+    "duration": 2.35,
+    "bars": 5,
+    "knownBy": [
+      "Squirtle",
+      "Wartortle",
+      "Seel",
+      "Dewgong",
+      "Kabuto"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Aqua Tail",
+    "type": "Water",
+    "damage": 50,
+    "energyIncrease": 0.05,
+    "duration": 2.35,
+    "bars": 2,
+    "knownBy": [
+      "Squirtle",
+      "Psyduck",
+      "Seel",
+      "Goldeen",
+      "Vaporeon",
+      "Dratini",
+      "Dragonair"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Blizzard",
+    "type": "Ice",
+    "damage": 60,
+    "energyIncrease": 0.05,
+    "duration": 3.9,
+    "bars": 1,
+    "knownBy": [
+      "Tentacruel",
+      "Dewgong",
+      "Cloyster",
+      "Seadra",
+      "Lapras",
+      "Articuno"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Body Slam",
+    "type": "Normal",
+    "damage": 50,
+    "energyIncrease": 0.05,
+    "duration": 1.56,
+    "bars": 2,
+    "knownBy": [
+      "Rattata",
+      "Nidoran♀",
+      "Nidoran♂",
+      "Clefairy",
+      "Vulpix",
+      "Jigglypuff",
+      "Meowth",
+      "Growlithe",
+      "Poliwag",
+      "Eevee",
+      "Snorlax"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Bone Club",
+    "type": "Ground",
+    "damage": 20,
+    "energyIncrease": 0.05,
+    "duration": 1.6,
+    "bars": 4,
+    "knownBy": [
+      "Cubone",
+      "Marowak"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Brick Break",
+    "type": "Fighting",
+    "damage": 30,
+    "energyIncrease": 0.25,
+    "duration": 1.6,
+    "bars": 3,
+    "knownBy": [
+      "Raichu",
+      "Mankey",
+      "Machop",
+      "Machoke",
+      "Hitmonchan",
+      "Kangaskhan"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Brine",
+    "type": "Water",
+    "damage": 15,
+    "energyIncrease": 0.05,
+    "duration": 2.4,
+    "bars": 5,
+    "knownBy": [
+      "Omanyte"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Bubble Beam",
+    "type": "Water",
+    "damage": 25,
+    "energyIncrease": 0.05,
+    "duration": 2.9,
+    "bars": 4,
+    "knownBy": [
+      "Poliwag",
+      "Poliwhirl",
+      "Tentacool",
+      "Shellder",
+      "Krabby",
+      "Horsea",
+      "Staryu"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Bug Buzz",
+    "type": "Bug",
+    "damage": 50,
+    "energyIncrease": 0.05,
+    "duration": 4.25,
+    "bars": 2,
+    "knownBy": [
+      "Butterfree",
+      "Venomoth",
+      "Scyther"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Bulldoze",
+    "type": "Ground",
+    "damage": 30,
+    "energyIncrease": 0.05,
+    "duration": 3.4,
+    "bars": 4,
+    "knownBy": [
+      "Sandslash",
+      "Arcanine",
+      "Cubone",
+      "Rhyhorn"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Cross Chop",
+    "type": "Fighting",
+    "damage": 55,
+    "energyIncrease": 0.25,
+    "duration": 2,
+    "bars": 1,
+    "knownBy": [
+      "Psyduck",
+      "Mankey",
+      "Primeape",
+      "Machop",
+      "Machoke",
+      "Machamp"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Cross Poison",
+    "type": "Poison",
+    "damage": 20,
+    "energyIncrease": 0.25,
+    "duration": 1.5,
+    "bars": 4,
+    "knownBy": [
+      "Paras",
+      "Parasect"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Dark Pulse",
+    "type": "Dark",
+    "damage": 45,
+    "energyIncrease": 0.05,
+    "duration": 3.5,
+    "bars": 3,
+    "knownBy": [
+      "Arbok",
+      "Meowth",
+      "Muk",
+      "Gastly",
+      "Haunter",
+      "Gengar",
+      "Koffing",
+      "Weezing"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Dazzling Gleam",
+    "type": "Fairy",
+    "damage": 45,
+    "energyIncrease": 0.05,
+    "duration": 4.2,
+    "bars": 3,
+    "knownBy": [
+      "Clefable",
+      "Wigglytuff",
+      "Kadabra",
+      "Alakazam",
+      "Chansey"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Dig",
+    "type": "Ground",
+    "damage": 45,
+    "energyIncrease": 0.05,
+    "duration": 5.8,
+    "bars": 3,
+    "knownBy": [
+      "Rattata",
+      "Raticate",
+      "Sandshrew",
+      "Nidorina",
+      "Nidorino",
+      "Diglett",
+      "Geodude",
+      "Graveler",
+      "Cubone",
+      "Marowak",
+      "Eevee"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Disarming Voice",
+    "type": "Fairy",
+    "damage": 20,
+    "energyIncrease": 0.05,
+    "duration": 3.9,
+    "bars": 5,
+    "knownBy": [
+      "Clefairy",
+      "Jigglypuff"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Discharge",
+    "type": "Electric",
+    "damage": 40,
+    "energyIncrease": 0.05,
+    "duration": 2.5,
+    "bars": 3,
+    "knownBy": [
+      "Pikachu",
+      "Magnemite",
+      "Magneton",
+      "Voltorb",
+      "Electrode",
+      "Jolteon",
+      "Porygon",
+      "Zapdos"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Dragon Claw",
+    "type": "Dragon",
+    "damage": 40,
+    "energyIncrease": 0.25,
+    "duration": 1.5,
+    "bars": 2,
+    "knownBy": [
+      "Charizard",
+      "Dragonite"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Dragon Pulse",
+    "type": "Dragon",
+    "damage": 50,
+    "energyIncrease": 0.05,
+    "duration": 3.6,
+    "bars": 2,
+    "knownBy": [
+      "Horsea",
+      "Seadra",
+      "Gyarados",
+      "Lapras",
+      "Dragonair",
+      "Dragonite",
+      "Mew"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Draining Kiss",
+    "type": "Fairy",
+    "damage": 15,
+    "energyIncrease": 0.05,
+    "duration": 2.8,
+    "bars": 5,
+    "knownBy": [
+      "Jynx"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Drill Peck",
+    "type": "Flying",
+    "damage": 30,
+    "energyIncrease": 0.05,
+    "duration": 2.7,
+    "bars": 3,
+    "knownBy": [
+      "Spearow",
+      "Doduo",
+      "Dodrio"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Drill Run",
+    "type": "Ground",
+    "damage": 40,
+    "energyIncrease": 0.25,
+    "duration": 3.4,
+    "bars": 3,
+    "knownBy": [
+      "Fearow",
+      "Rapidash",
+      "Seaking"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Earthquake",
+    "type": "Ground",
+    "damage": 60,
+    "energyIncrease": 0.05,
+    "duration": 4.2,
+    "bars": 1,
+    "knownBy": [
+      "Sandslash",
+      "Nidoqueen",
+      "Nidoking",
+      "Dugtrio",
+      "Golem",
+      "Marowak",
+      "Rhydon",
+      "Kangaskhan",
+      "Tauros",
+      "Snorlax",
+      "Mew"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Fire Blast",
+    "type": "Fire",
+    "damage": 60,
+    "energyIncrease": 0.05,
+    "duration": 4.1,
+    "bars": 1,
+    "knownBy": [
+      "Charizard",
+      "Ninetales",
+      "Arcanine",
+      "Ponyta",
+      "Rapidash",
+      "Magmar",
+      "Flareon",
+      "Moltres",
+      "Mew"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Fire Punch",
+    "type": "Fire",
+    "damage": 35,
+    "energyIncrease": 0.05,
+    "duration": 2.8,
+    "bars": 3,
+    "knownBy": [
+      "Charmeleon",
+      "Hitmonchan",
+      "Magmar"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Flame Burst",
+    "type": "Fire",
+    "damage": 25,
+    "energyIncrease": 0.05,
+    "duration": 2.1,
+    "bars": 4,
+    "knownBy": [
+      "Charmander",
+      "Charmeleon"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Flame Charge",
+    "type": "Fire",
+    "damage": 20,
+    "energyIncrease": 0.05,
+    "duration": 3.1,
+    "bars": 4,
+    "knownBy": [
+      "Charmander",
+      "Vulpix",
+      "Ponyta"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Flame Wheel",
+    "type": "Fire",
+    "damage": 35,
+    "energyIncrease": 0.05,
+    "duration": 4.6,
+    "bars": 4,
+    "knownBy": [
+      "Growlithe",
+      "Ponyta"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Flamethrower",
+    "type": "Fire",
+    "damage": 50,
+    "energyIncrease": 0.05,
+    "duration": 2.9,
+    "bars": 2,
+    "knownBy": [
+      "Charmander",
+      "Charmeleon",
+      "Charizard",
+      "Vulpix",
+      "Ninetales",
+      "Growlithe",
+      "Arcanine",
+      "Magmar",
+      "Flareon",
+      "Moltres"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Flash Cannon",
+    "type": "Steel",
+    "damage": 55,
+    "energyIncrease": 0.05,
+    "duration": 3.9,
+    "bars": 3,
+    "knownBy": [
+      "Blastoise",
+      "Magneton",
+      "Horsea"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Gunk Shot",
+    "type": "Poison",
+    "damage": 60,
+    "energyIncrease": 0.05,
+    "duration": 3,
+    "bars": 1,
+    "knownBy": [
+      "Ekans",
+      "Arbok"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Heat Wave",
+    "type": "Fire",
+    "damage": 60,
+    "energyIncrease": 0.05,
+    "duration": 3.8,
+    "bars": 1,
+    "knownBy": [
+      "Ninetales",
+      "Rapidash",
+      "Flareon",
+      "Moltres"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Horn Attack",
+    "type": "Normal",
+    "damage": 20,
+    "energyIncrease": 0.05,
+    "duration": 2.2,
+    "bars": 4,
+    "knownBy": [
+      "Nidoran♂",
+      "Nidorino",
+      "Rhyhorn",
+      "Goldeen",
+      "Tauros"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Hurricane",
+    "type": "Flying",
+    "damage": 60,
+    "energyIncrease": 0.05,
+    "duration": 3.2,
+    "bars": 1,
+    "knownBy": [
+      "Pidgeot",
+      "Mew"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Hydro Pump",
+    "type": "Water",
+    "damage": 60,
+    "energyIncrease": 0.05,
+    "duration": 3.8,
+    "bars": 1,
+    "knownBy": [
+      "Wartortle",
+      "Blastoise",
+      "Golduck",
+      "Poliwrath",
+      "Tentacruel",
+      "Cloyster",
+      "Seadra",
+      "Starmie",
+      "Gyarados",
+      "Vaporeon",
+      "Omastar"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Hyper Beam",
+    "type": "Normal",
+    "damage": 70,
+    "energyIncrease": 0.05,
+    "duration": 5,
+    "bars": 1,
+    "knownBy": [
+      "Raticate",
+      "Wigglytuff",
+      "Electrode",
+      "Lickitung",
+      "Aerodactyl",
+      "Snorlax",
+      "Dragonite",
+      "Mewtwo",
+      "Mew"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Hyper Fang",
+    "type": "Normal",
+    "damage": 35,
+    "energyIncrease": 0.05,
+    "duration": 2.1,
+    "bars": 3,
+    "knownBy": [
+      "Rattata",
+      "Raticate"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Ice Beam",
+    "type": "Ice",
+    "damage": 50,
+    "energyIncrease": 0.05,
+    "duration": 3.65,
+    "bars": 2,
+    "knownBy": [
+      "Wartortle",
+      "Blastoise",
+      "Golduck",
+      "Slowbro",
+      "Lapras",
+      "Articuno"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Ice Punch",
+    "type": "Ice",
+    "damage": 45,
+    "energyIncrease": 0.05,
+    "duration": 3.5,
+    "bars": 3,
+    "knownBy": [
+      "Poliwrath",
+      "Hitmonchan",
+      "Jynx"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Icy Wind",
+    "type": "Ice",
+    "damage": 15,
+    "energyIncrease": 0.05,
+    "duration": 3.8,
+    "bars": 5,
+    "knownBy": [
+      "Seel",
+      "Dewgong",
+      "Shellder",
+      "Cloyster",
+      "Seaking",
+      "Articuno"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Iron Head",
+    "type": "Steel",
+    "damage": 40,
+    "energyIncrease": 0.05,
+    "duration": 2,
+    "bars": 3,
+    "knownBy": [
+      "Onix",
+      "Tauros",
+      "Aerodactyl"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Leaf Blade",
+    "type": "Grass",
+    "damage": 45,
+    "energyIncrease": 0.25,
+    "duration": 2.8,
+    "bars": 2,
+    "knownBy": [
+      "Victreebel",
+      "Farfetchd"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Low Sweep",
+    "type": "Fighting",
+    "damage": 25,
+    "energyIncrease": 0.05,
+    "duration": 2.25,
+    "bars": 4,
+    "knownBy": [
+      "Mankey",
+      "Primeape",
+      "Machop",
+      "Hitmonlee"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Magnet Bomb",
+    "type": "Steel",
+    "damage": 25,
+    "energyIncrease": 0.05,
+    "duration": 2.8,
+    "bars": 4,
+    "knownBy": [
+      "Magnemite",
+      "Magneton"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Megahorn",
+    "type": "Bug",
+    "damage": 55,
+    "energyIncrease": 0.05,
+    "duration": 3.2,
+    "bars": 1,
+    "knownBy": [
+      "Nidoking",
+      "Rhydon",
+      "Seaking"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Moonblast",
+    "type": "Fairy",
+    "damage": 60,
+    "energyIncrease": 0.05,
+    "duration": 4.1,
+    "bars": 1,
+    "knownBy": [
+      "Clefairy",
+      "Clefable",
+      "Oddish",
+      "Gloom",
+      "Vileplume",
+      "Mew"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Mud Bomb",
+    "type": "Ground",
+    "damage": 25,
+    "energyIncrease": 0.05,
+    "duration": 2.6,
+    "bars": 4,
+    "knownBy": [
+      "Diglett",
+      "Dugtrio",
+      "Poliwag",
+      "Poliwhirl",
+      "Grimer"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Night Slash",
+    "type": "Dark",
+    "damage": 25,
+    "energyIncrease": 0.25,
+    "duration": 2.7,
+    "bars": 4,
+    "knownBy": [
+      "Meowth",
+      "Persian",
+      "Primeape",
+      "Scyther"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Ominous Wind",
+    "type": "Ghost",
+    "damage": 25,
+    "energyIncrease": 0.05,
+    "duration": 3.1,
+    "bars": 4,
+    "knownBy": [
+      "Golbat",
+      "Gastly"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Petal Blizzard",
+    "type": "Grass",
+    "damage": 50,
+    "energyIncrease": 0.05,
+    "duration": 3.2,
+    "bars": 2,
+    "knownBy": [
+      "Venusaur",
+      "Gloom",
+      "Vileplume"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Play Rough",
+    "type": "Fairy",
+    "damage": 50,
+    "energyIncrease": 0.05,
+    "duration": 2.9,
+    "bars": 2,
+    "knownBy": [
+      "Jigglypuff",
+      "Wigglytuff",
+      "Persian"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Poison Fang",
+    "type": "Poison",
+    "damage": 15,
+    "energyIncrease": 0.05,
+    "duration": 2.4,
+    "bars": 5,
+    "knownBy": [
+      "Nidoran♀",
+      "Nidorina",
+      "Zubat",
+      "Golbat",
+      "Venonat",
+      "Venomoth"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Power Gem",
+    "type": "Rock",
+    "damage": 40,
+    "energyIncrease": 0.05,
+    "duration": 2.9,
+    "bars": 3,
+    "knownBy": [
+      "Persian",
+      "Staryu",
+      "Starmie"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Power Whip",
+    "type": "Grass",
+    "damage": 60,
+    "energyIncrease": 0.12,
+    "duration": 2.8,
+    "bars": 1,
+    "knownBy": [
+      "Bulbasaur",
+      "Ivysaur",
+      "Bellsprout",
+      "Weepinbell",
+      "Lickitung",
+      "Tangela"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Psybeam",
+    "type": "Psychic",
+    "damage": 35,
+    "energyIncrease": 0.05,
+    "duration": 3.8,
+    "bars": 4,
+    "knownBy": [
+      "Venonat",
+      "Psyduck",
+      "Kadabra",
+      "Drowzee",
+      "Chansey",
+      "Starmie",
+      "Mr. Mime",
+      "Porygon"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Psychic",
+    "type": "Psychic",
+    "damage": 50,
+    "energyIncrease": 0.05,
+    "duration": 2.8,
+    "bars": 2,
+    "knownBy": [
+      "Butterfree",
+      "Clefable",
+      "Venomoth",
+      "Golduck",
+      "Alakazam",
+      "Slowpoke",
+      "Slowbro",
+      "Drowzee",
+      "Hypno",
+      "Exeggcute",
+      "Exeggutor",
+      "Chansey",
+      "Mr. Mime",
+      "Mewtwo",
+      "Mew"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Psyshock",
+    "type": "Psychic",
+    "damage": 40,
+    "energyIncrease": 0.05,
+    "duration": 2.7,
+    "bars": 3,
+    "knownBy": [
+      "Abra",
+      "Slowpoke",
+      "Drowzee",
+      "Hypno",
+      "Jynx"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Rock Slide",
+    "type": "Rock",
+    "damage": 40,
+    "energyIncrease": 0.05,
+    "duration": 3.2,
+    "bars": 3,
+    "knownBy": [
+      "Sandshrew",
+      "Geodude",
+      "Graveler",
+      "Onix",
+      "Omastar"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Rock Tomb",
+    "type": "Rock",
+    "damage": 25,
+    "energyIncrease": 0.25,
+    "duration": 3.4,
+    "bars": 4,
+    "knownBy": [
+      "Sandshrew",
+      "Sandslash",
+      "Diglett",
+      "Geodude",
+      "Omanyte",
+      "Kabuto"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Scald",
+    "type": "Water",
+    "damage": 35,
+    "energyIncrease": 0.05,
+    "duration": 4,
+    "bars": 3,
+    "knownBy": [
+      "Poliwhirl"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Seed Bomb",
+    "type": "Grass",
+    "damage": 30,
+    "energyIncrease": 0.05,
+    "duration": 2.4,
+    "bars": 3,
+    "knownBy": [
+      "Bulbasaur",
+      "Oddish",
+      "Paras",
+      "Weepinbell",
+      "Exeggcute",
+      "Exeggutor"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Shadow Ball",
+    "type": "Ghost",
+    "damage": 40,
+    "energyIncrease": 0.05,
+    "duration": 3.08,
+    "bars": 3,
+    "knownBy": [
+      "Abra",
+      "Kadabra",
+      "Alakazam",
+      "Haunter",
+      "Gengar",
+      "Hypno",
+      "Weezing",
+      "Mr. Mime",
+      "Mewtwo"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Signal Beam",
+    "type": "Bug",
+    "damage": 35,
+    "energyIncrease": 0.05,
+    "duration": 3.1,
+    "bars": 3,
+    "knownBy": [
+      "Butterfree",
+      "Venonat",
+      "Abra",
+      "Voltorb",
+      "Porygon"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Sludge",
+    "type": "Poison",
+    "damage": 25,
+    "energyIncrease": 0.05,
+    "duration": 2.6,
+    "bars": 4,
+    "knownBy": [
+      "Grimer",
+      "Koffing"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Sludge Bomb",
+    "type": "Poison",
+    "damage": 50,
+    "energyIncrease": 0.05,
+    "duration": 2.6,
+    "bars": 2,
+    "knownBy": [
+      "Bulbasaur",
+      "Ivysaur",
+      "Venusaur",
+      "Beedrill",
+      "Ekans",
+      "Nidoran♀",
+      "Nidorina",
+      "Nidoran♂",
+      "Nidorino",
+      "Zubat",
+      "Oddish",
+      "Gloom",
+      "Bellsprout",
+      "Weepinbell",
+      "Victreebel",
+      "Grimer",
+      "Muk",
+      "Gastly",
+      "Haunter",
+      "Koffing",
+      "Weezing",
+      "Tangela"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Sludge Wave",
+    "type": "Poison",
+    "damage": 60,
+    "energyIncrease": 0.05,
+    "duration": 3.4,
+    "bars": 1,
+    "knownBy": [
+      "Arbok",
+      "Nidoqueen",
+      "Nidoking",
+      "Tentacruel",
+      "Muk",
+      "Gengar"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Solar Beam",
+    "type": "Grass",
+    "damage": 65,
+    "energyIncrease": 0.05,
+    "duration": 4.9,
+    "bars": 1,
+    "knownBy": [
+      "Ivysaur",
+      "Venusaur",
+      "Vileplume",
+      "Parasect",
+      "Victreebel",
+      "Exeggutor",
+      "Tangela",
+      "Mew"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Stomp",
+    "type": "Normal",
+    "damage": 25,
+    "energyIncrease": 0.05,
+    "duration": 2.1,
+    "bars": 4,
+    "knownBy": [
+      "Hitmonlee",
+      "Lickitung",
+      "Rhyhorn",
+      "Kangaskhan"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Stone Edge",
+    "type": "Rock",
+    "damage": 55,
+    "energyIncrease": 0.5,
+    "duration": 3.1,
+    "bars": 1,
+    "knownBy": [
+      "Nidoqueen",
+      "Dugtrio",
+      "Machamp",
+      "Graveler",
+      "Golem",
+      "Onix",
+      "Hitmonlee",
+      "Rhydon",
+      "Kabutops"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Struggle",
+    "type": "Normal",
+    "damage": 15,
+    "energyIncrease": 0,
+    "duration": 1.695,
+    "bars": 5,
+    "knownBy": [
+      "Caterpie",
+      "Metapod",
+      "Weedle",
+      "Kakuna",
+      "Magikarp",
+      "Ditto"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Submission",
+    "type": "Fighting",
+    "damage": 30,
+    "energyIncrease": 0.05,
+    "duration": 2.1,
+    "bars": 3,
+    "knownBy": [
+      "Poliwrath",
+      "Machoke",
+      "Machamp",
+      "Pinsir"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Swift",
+    "type": "Normal",
+    "damage": 25,
+    "energyIncrease": 0.05,
+    "duration": 3,
+    "bars": 4,
+    "knownBy": [
+      "Doduo",
+      "Staryu",
+      "Eevee"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Thunder",
+    "type": "Electric",
+    "damage": 65,
+    "energyIncrease": 0.05,
+    "duration": 4.3,
+    "bars": 1,
+    "knownBy": [
+      "Pikachu",
+      "Raichu",
+      "Electabuzz",
+      "Jolteon",
+      "Zapdos",
+      "Mew"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Thunder Punch",
+    "type": "Electric",
+    "damage": 40,
+    "energyIncrease": 0.05,
+    "duration": 2.4,
+    "bars": 3,
+    "knownBy": [
+      "Raichu",
+      "Hitmonchan",
+      "Electabuzz"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Thunderbolt",
+    "type": "Electric",
+    "damage": 50,
+    "energyIncrease": 0.05,
+    "duration": 2.7,
+    "bars": 2,
+    "knownBy": [
+      "Pikachu",
+      "Magnemite",
+      "Voltorb",
+      "Electrode",
+      "Electabuzz",
+      "Jolteon",
+      "Zapdos"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Twister",
+    "type": "Dragon",
+    "damage": 15,
+    "energyIncrease": 0.05,
+    "duration": 2.7,
+    "bars": 5,
+    "knownBy": [
+      "Pidgey",
+      "Pidgeotto",
+      "Spearow",
+      "Fearow",
+      "Gyarados",
+      "Dratini"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Vice Grip",
+    "type": "Normal",
+    "damage": 15,
+    "energyIncrease": 0.05,
+    "duration": 2.1,
+    "bars": 5,
+    "knownBy": [
+      "Krabby",
+      "Kingler",
+      "Pinsir"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Water Pulse",
+    "type": "Water",
+    "damage": 30,
+    "energyIncrease": 0.05,
+    "duration": 3.3,
+    "bars": 4,
+    "knownBy": [
+      "Squirtle",
+      "Tentacool",
+      "Slowpoke",
+      "Slowbro",
+      "Shellder",
+      "Krabby",
+      "Kingler",
+      "Goldeen",
+      "Vaporeon",
+      "Kabutops"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "Wrap",
+    "type": "Normal",
+    "damage": 15,
+    "energyIncrease": 0.05,
+    "duration": 4,
+    "bars": 5,
+    "knownBy": [
+      "Ekans",
+      "Bellsprout",
+      "Tentacool",
+      "Dratini",
+      "Dragonair"
+    ],
+    "attackType": "special"
+  },
+  {
+    "name": "X-Scissor",
+    "type": "Bug",
+    "damage": 30,
+    "energyIncrease": 0.05,
+    "duration": 2.1,
+    "bars": 3,
+    "knownBy": [
+      "Beedrill",
+      "Paras",
+      "Parasect",
+      "Kingler",
+      "Scyther",
+      "Pinsir"
+    ],
+    "attackType": "special"
+  }
+]
