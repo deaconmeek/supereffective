@@ -29,6 +29,10 @@
   padding: 0;
 }
 
+.centered {
+  text-align: center;
+}
+
 .tile {
   width:140px;
   height:120px;
@@ -52,23 +56,29 @@
   position: absolute;
 }
 
-.tile span {
+.tileName {
   float: left;
   position: absolute;
   top: 80%;
   left: 50%;
   transform: translate(-50%, 0%);
   white-space: nowrap;
+  color: #333;
 }
 
-.tile .tag {
+.tileTag {
+  float: left;
+  position: absolute;
   background-color:rgba(0, 0, 0, 0.6);
   color: #FFF;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  white-space: nowrap;
   font-size: 11px;
   font-weight: bold;
   border-radius: 4px;
   width: 90%;
   text-align: center;
   padding: 0px 5px;
-  top: 80%;
+  top: 100%;
 }
