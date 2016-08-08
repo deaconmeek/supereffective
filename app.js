@@ -4,12 +4,12 @@
 angular.module('pokemonFight', [
   'ngRoute',
   'pokemonFight.target',
-  'pokemonFight.view2'
+  'pokemonFight.opponents'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
   $routeProvider.
   when("/target", {templateUrl: "target/target.html", controller: "TargetCtrl"}).
-  when("/view2/:pokemonId", {templateUrl: "view2/view2.html", controller: "View2Ctrl"}).
+  when("/opponents/:pokemonId", {templateUrl: "opponents/opponents.html", controller: "OpponentsCtrl"}).
   otherwise({redirectTo: '/target'});
 }]);

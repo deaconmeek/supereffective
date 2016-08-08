@@ -1,0 +1,29 @@
+<div class="container">
+  <div style="margin:20px;" class="row centered">
+    <img style="max-height:80px" ng-src="img/pokemon/{{ target.id }}.png" />
+    <h2>{{ target.displayName }}</h2>
+    <table style="margin-left:auto;margin-right:auto;line-height:0.8em">
+      <tr>
+        <td><strong>Type:</strong></td><td>{{ target.displayTypes }}</td>
+      </tr>
+      <tr>
+        <td><strong>Strong against:</strong></td><td>{{ target.displayStrengths }}</td>
+      </tr>
+      <tr>
+        <td><strong>Weak against:</strong></td><td>{{ target.displayWeaknesses }}</td>
+      </tr>
+    </table>
+  </div>
+
+  <div style="margin-bottom: 100px;" ng-repeat="(ranking, subPokemons) in subPokemonsByRanking" class="row">
+    <span style="width: 100%;float: left;border-bottom:1px solid">{{ ranking }}</span>
+    <div style="margin-bottom:30px;" ng-repeat="subPokemon in subPokemons" class="tile">
+      <img ng-src="img/pokemon/{{subPokemon.id}}.png" />
+      <span class="tileTag">{{ subPokemon.attackTypes }}</span>
+      <span class="tileName">{{ subPokemon.displayName }}</span>
+    </div>
+  </div>
+  <!-- <div class="row">
+    <pre>{{ result }}</pre>
+  </div> -->
+</div>

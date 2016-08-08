@@ -349,15 +349,15 @@
       }
     });
 
-    var view1 = new View;
+    var target = new View;
     $el.trigger('click');
     assert.equal(1, count);
 
-    var view2 = new View;
+    var opponents = new View;
     $el.trigger('click');
     assert.equal(3, count);
 
-    view1.delegateEvents();
+    target.delegateEvents();
     $el.trigger('click');
     assert.equal(5, count);
   });
@@ -415,11 +415,11 @@
       attributes: {foo: 'bar'}
     });
 
-    var view1 = new View({id: 'foo'});
-    assert.strictEqual(view1.el.id, 'foo');
+    var target = new View({id: 'foo'});
+    assert.strictEqual(target.el.id, 'foo');
 
-    var view2 = new View();
-    assert.ok(!view2.el.id);
+    var opponents = new View();
+    assert.ok(!opponents.el.id);
   });
 
   QUnit.test('views stopListening', function(assert) {
