@@ -1,3 +1,5 @@
+/* globals _ */
+
 'use strict';
 
 angular.module('pokemonFight.view2', ['ngRoute'])
@@ -9,7 +11,12 @@ angular.module('pokemonFight.view2', ['ngRoute'])
       $scope.attacks = data;
       $http.get('../data/types2.json').success(function(data) {
         $scope.types = data;
+        $scope.targetId = $routeParams.pokemonId;
         go();
+        _.each($scope.subPokemonsByRanking, (subPokemons) => {
+          _.each(subPokemons, o => (o.displayName = _.padStart(o.id, 3, '0') + ': ' + o.name));
+        });
+
       });
     });
   });
@@ -67,10 +74,12 @@ angular.module('pokemonFight.view2', ['ngRoute'])
     // });
 
 
-    let targetPokemonId = $routeParams.pokemonId;
+    let targetPokemonId = $scope.targetId;
 
     let targetPokemon = pokemonById[targetPokemonId],
      targetPokemonTypes = _.map(targetPokemon.types, o => typeByName[o].name);
+
+    $scope.targetName = _.padStart(targetPokemon.id, 3, '0') + ': ' + targetPokemon.name;
 
     console.log('----------------');
     console.log('Name: ' + targetPokemon.name);
@@ -150,6 +159,7 @@ angular.module('pokemonFight.view2', ['ngRoute'])
           attacksByAttackType = _.groupBy(attacks, o => attackByName[o].type);
         _.each(_.keys(attacksByAttackType), (attackType) => {
           let subPokemon = {
+              id: pokemon.id,
               name: pokemon.name,
               maxCP: pokemon.maxCP,
               types: pokemon.types,
@@ -186,30 +196,38 @@ angular.module('pokemonFight.view2', ['ngRoute'])
         Math.pow(0.80, succeptableToTarget.length);
       subPokemon.ranking = subPokemon.ranking.toFixed(2);
 
-      console.log('\nsubKey: ' + subKey + '. ranking: ' + subPokemon.ranking);
-      console.log('attackType.name: ' + attackType.name);
-      console.log('subPokemon.types: ' + subPokemon.types);
-      console.log('stabBonus: ' + stabBonus);
-      console.log('bonusDamageToTarget: ' + bonusDamageToTarget);
-      console.log('reducedDamageToTarget: ' + reducedDamageToTarget);
-      console.log('resistantToTarget: ' + resistantToTarget);
-      console.log('succeptableToTarget: ' + succeptableToTarget);
+      // console.log('\nsubKey: ' + subKey + '. ranking: ' + subPokemon.ranking);
+      // console.log('attackType.name: ' + attackType.name);
+      // console.log('subPokemon.types: ' + subPokemon.types);
+      // console.log('stabBonus: ' + stabBonus);
+      // console.log('bonusDamageToTarget: ' + bonusDamageToTarget);
+      // console.log('reducedDamageToTarget: ' + reducedDamageToTarget);
+      // console.log('resistantToTarget: ' + resistantToTarget);
+      // console.log('succeptableToTarget: ' + succeptableToTarget);
     });
 
 
     let subPokemonRankings = _.uniq(_.map(subPokemonBySubKey, 'ranking')).sort().reverse();
 
+    let subPokemonsByRanking = {};
+
     console.log('\n\nPokemons to use for attacking:');
     _.each(subPokemonRankings, (ranking) => {
       if (parseFloat(ranking) <= 1) return true;
+
+      subPokemonsByRanking[ranking] = subPokemonsByRanking[ranking] || [];
+
       let subPokemonsOfRanking = _.filter(subPokemonBySubKey, o => o.ranking === ranking),
         subPokemonsOfRankingBySortKey = _.groupBy(subPokemonsOfRanking, o => _.padStart(o.maxCP, 5, '0') + '|' + o.name);
       console.log('\n' + ranking   + ' multiplier against ' + targetPokemon.name + ' for: ');
       _.each(_.keys(subPokemonsOfRankingBySortKey).sort().reverse(), (sortKey) => {
         let subPokemons = subPokemonsOfRankingBySortKey[sortKey];
         console.log(_.first(subPokemons).name + ' (Attacks: ' + _.map(subPokemons, 'attackType').join(', ') + ')');
+        subPokemonsByRanking[ranking].push(_.extend(_.first(subPokemons), {attackTypes: _.map(subPokemons, 'attackType').join(', ')}));
       });
     });
+    $scope.subPokemonsByRanking = subPokemonsByRanking;
+
   }
 
 

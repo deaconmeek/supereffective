@@ -1,3 +1,17 @@
-<pre>
-{{ result }}
-</pre>
+<div class="container">
+  <div class="row" style="text-align:center">
+    <img style="margin:20px;max-height:80px" ng-src="img/pokemon/{{ targetId }}.png" />
+  </div>
+  <h2 style="text-align:center">{{ targetName }}</h2>
+  <div style="margin-bottom: 100px;" ng-repeat="(ranking, subPokemons) in subPokemonsByRanking" class="row">
+    <span style="width: 100%;float: left;border-bottom:1px solid">{{ ranking }}</span>
+    <div style="margin-bottom:30px;" ng-repeat="subPokemon in subPokemons" class="tile">
+      <img style="top:80%" ng-src="img/pokemon/{{subPokemon.id}}.png" />
+      <span style="top:115%" class="tag">{{ subPokemon.attackTypes }}</span>
+      <span style="top:95%">{{ subPokemon.displayName }}</span>
+    </div>
+  </div>
+  <!-- <div class="row">
+    <pre>{{ result }}</pre>
+  </div> -->
+</div>

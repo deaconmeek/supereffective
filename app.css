@@ -30,18 +30,45 @@
 }
 
 .tile {
-  width:100px;
-  height:100px;
+  width:140px;
+  height:120px;
   float:left;
   margin:5px;
   position: relative;
 }
 
+.tile:hover {
+  background-color: #eee;
+}
+
 .tile img {
-    width: auto;
-    max-width: 90px;
-    height: auto;
-    max-height: 90px;
-    top: 50%;
-    transform: translate(0, -50%);
+  width: auto;
+  max-width: 80px;
+  height: auto;
+  max-height: 80px;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -80%);
+  position: absolute;
+}
+
+.tile span {
+  float: left;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  white-space: nowrap;
+}
+
+.tile .tag {
+  background-color:rgba(0, 0, 0, 0.6);
+  color: #FFF;
+  font-size: 11px;
+  font-weight: bold;
+  border-radius: 4px;
+  width: 90%;
+  text-align: center;
+  padding: 0px 5px;
+  top: 80%;
 }
