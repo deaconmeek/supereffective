@@ -15,13 +15,25 @@
     </table>
   </div>
 
-  <div style="margin-bottom: 100px;" ng-repeat="(ranking, subPokemons) in subPokemonsByRanking" class="row">
-    <span style="width: 100%;float: left;border-bottom:1px solid">{{ ranking }}</span>
-    <div style="margin-bottom:30px;" ng-repeat="subPokemon in subPokemons" class="tile">
-      <img ng-src="img/pokemon/{{subPokemon.id}}.png" />
-      <span class="tileTag">{{ subPokemon.attackTypes }}</span>
-      <span class="tileName">{{ subPokemon.displayName }}</span>
+  <div class="row" ng-repeat="pokemon in rankedPokemon">
+    <div class="three columns">
+      <div style="margin-bottom:30px;" class="tile">
+        <img ng-src="img/pokemon/{{pokemon.id}}.png" />
+        <span class="tileName">{{ pokemon.displayName }}</span>
+      </div>
     </div>
+    <div class="nine columns">
+      <span>Defense: {{ pokemon.defenceRanking | number: 2  }} ({{ pokemon.defenceRanking * pokemon.defense | number: 0 }})</span><br />
+      <span>Quick attacks:</span><br />
+      <div ng-repeat="quickAttack in pokemon.quickAttacks">
+        <span>{{ quickAttack.name}}: {{ quickAttack.attackRanking | number: 2 }} ({{ quickAttack.attackRanking * pokemon.attack | number: 0 }})</span><br />
+      </div>
+      <span>Special attacks:</span><br />
+      <div ng-repeat="specialAttack in pokemon.specialAttacks">
+        <span>{{ specialAttack.name}}: {{ specialAttack.attackRanking | number: 2  }}</span><br />
+      </div>
+    </div>
+    <hr />
   </div>
   <!-- <div class="row">
     <pre>{{ result }}</pre>

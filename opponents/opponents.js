@@ -7,14 +7,13 @@ angular.module('pokemonFight.opponents', ['ngRoute'])
 .controller('OpponentsCtrl', ['$scope', '$routeParams', '$http', function($scope, $routeParams, $http) {
   $http.get('../data/pokemon2.json').success(function(data) {
     $scope.pokemons = data;
-    $http.get('../data/attacks2.json').success(function(data) {
+    $http.get('../data/attacks3.json').success(function(data) {
       $scope.attacks = data;
       $http.get('../data/types2.json').success(function(data) {
         $scope.types = data;
         go();
-        _.each($scope.subPokemonsByRanking, (subPokemons) => {
-          _.each(subPokemons, o => (o.displayName = _.padStart(o.id, 3, '0') + ': ' + o.name));
-        });
+        _.each($scope.rankedPokemon, o => (o.displayName = _.padStart(o.id, 3, '0') + ': ' + o.name));
+
         $scope.target.displayName = _.padStart($scope.target.id, 3, '0') + ': ' + $scope.target.name;
         $scope.target.displayTypes = $scope.target.types.join(', ');
         $scope.target.displayStrengths = $scope.target.resistantTo.join(', ');
@@ -121,114 +120,91 @@ angular.module('pokemonFight.opponents', ['ngRoute'])
     });
 
 
-
-    // When fighting another pokemon, you want to know 3 things:
-    // 1) When attacking, which attack types are they weak against?
-    //    Find pokemon/attackType combinations that exploit these weaknesses
-    //    Attack types that match the pokemon type will do 25% extra damage
-    // 2) When attacking, which attack types are they strong against?
-    //    Avoid pokemon/attackType combinations that have this weakness
-    // 3) When defending, which attack types are they able to use?
-    //    Avoid pokemon base types which have weaknesses against these attacks
-    //    Remember that if the attack type matches the attacker base type
-    //    then the attack will do 25% extra damamge (STAB)
-
-
     // Assign ratings for each pokemon/attack-type combination to determine their effectiveness against the target pokemon
-    let ignorePokemonAttackTypes = false;
-
-    function getSubKey(subPokemon) {
-      return subPokemon.name + '_' + subPokemon.attackType;
-    }
-
-    let subPokemonBySubKey = {};
-    _.each(pokemonDb, (pokemon) => {
-      if (ignorePokemonAttackTypes) {
-        _.each(pokemon.types, (type) => {
-          let subPokemon = {
-              name: pokemon.name,
-              maxCP: pokemon.maxCP,
-              types: pokemon.types,
-              attackType: type,
-              attackNames: 'n/a'
-            },
-            subKey = getSubKey(subPokemon);
-          subPokemonBySubKey[subKey] = subPokemon;
-        });
-      }
-      else {
-        let attacks = _.union(pokemon.quickAttacks, pokemon.specialAttacks),
-          attacksByAttackType = _.groupBy(attacks, o => attackByName[o].type);
-        _.each(_.keys(attacksByAttackType), (attackType) => {
-          let subPokemon = {
-              id: pokemon.id,
-              name: pokemon.name,
-              ability: (pokemon.attack * pokemon.defense),
-              types: pokemon.types,
-              attackType: attackType,
-              attackNames: attacksByAttackType[attackType]
-            },
-            subKey = getSubKey(subPokemon);
-          subPokemonBySubKey[subKey] = subPokemon;
-        });
-      }
-    });
-
-
-    // Assign ratings for each subPokemon to determine their effectiveness against the target pokemon
-    _.each(subPokemonBySubKey, (subPokemon, subKey) => {
-
-      let attackType = typeByName[subPokemon.attackType],
-        bonusDamageToTarget = _.intersection(attackType.bonusDamageTo, targetPokemonTypes),
-        reducedDamageToTarget = _.intersection(attackType.reducedDamageTo, targetPokemonTypes);
+    let rankedPokemon = _.cloneDeep(pokemonDb);
+    _.each(rankedPokemon, (pokemon) => {
 
       // This formula assumes that the target pokemon will attack with his base types (for calculating defense multipliers)
-      // This also means that the target pokemon will get a STAB bonus on all attacks
-      let defenseTypes = _.map(subPokemon.types, o => typeByName[o]),
+      let defenseTypes = _.map(pokemon.types, o => typeByName[o]),
         resistantToTarget = _.chain(defenseTypes).map('resistantTo').flatten().uniq().intersection(targetPokemonTypes).value(),
         succeptableToTarget = _.chain(defenseTypes).map('succeptableTo').flatten().uniq().intersection(targetPokemonTypes).value();
 
-      let stabBonus = _.includes(subPokemon.types, attackType.name) ? 1.25 : 1,
-        opponentStabBonus = 1.25;
-
-      subPokemon.ranking = 1 * stabBonus / opponentStabBonus *
-        Math.pow(1.25, bonusDamageToTarget.length) *
-        Math.pow(0.80, reducedDamageToTarget.length) *
+      pokemon.defenceRanking = // pokemon.defense * pokemon.hitPoints *
         Math.pow(1.25, resistantToTarget.length) *
         Math.pow(0.80, succeptableToTarget.length);
-      subPokemon.ranking = subPokemon.ranking.toFixed(2);
 
-      // console.log('\nsubKey: ' + subKey + '. ranking: ' + subPokemon.ranking);
-      // console.log('attackType.name: ' + attackType.name);
-      // console.log('subPokemon.types: ' + subPokemon.types);
-      // console.log('stabBonus: ' + stabBonus);
-      // console.log('bonusDamageToTarget: ' + bonusDamageToTarget);
-      // console.log('reducedDamageToTarget: ' + reducedDamageToTarget);
+      // console.log('pokemon: ' + pokemon.name);
+      // console.log('pokemon.types: ' + pokemon.types);
       // console.log('resistantToTarget: ' + resistantToTarget);
       // console.log('succeptableToTarget: ' + succeptableToTarget);
-    });
+      // console.log('pokemon.defenceRanking: ' + pokemon.defenceRanking);
 
+      let attacks = _.map(_.union(pokemon.quickAttacks, pokemon.specialAttacks), o => attackByName[o]);
+      _.each(attacks, (attack) => {
 
-    let subPokemonRankings = _.uniq(_.map(subPokemonBySubKey, 'ranking')).sort().reverse();
+        let attackType = typeByName[attack.type],
+          bonusDamageToTarget = _.intersection(attackType.bonusDamageTo, targetPokemonTypes),
+          reducedDamageToTarget = _.intersection(attackType.reducedDamageTo, targetPokemonTypes);
+        let stabBonus = _.includes(pokemon.types, attackType.name) ? 1.25 : 1;
 
-    let subPokemonsByRanking = {};
+        attack.attackRanking = attack.dps * stabBonus * //pokemon.attack *
+          Math.pow(1.25, bonusDamageToTarget.length) *
+          Math.pow(0.80, reducedDamageToTarget.length);
 
-    console.log('\n\nPokemons to use for attacking:');
-    _.each(subPokemonRankings, (ranking) => {
-      if (parseFloat(ranking) <= 1) return true;
-
-      subPokemonsByRanking[ranking] = subPokemonsByRanking[ranking] || [];
-
-      let subPokemonsOfRanking = _.filter(subPokemonBySubKey, o => o.ranking === ranking),
-        subPokemonsOfRankingBySortKey = _.groupBy(subPokemonsOfRanking, o => _.padStart(o.ability, 10, '0') + '|' + o.name);
-      console.log('\n' + ranking   + ' multiplier against ' + targetPokemon.name + ' for: ');
-      _.each(_.keys(subPokemonsOfRankingBySortKey).sort().reverse(), (sortKey) => {
-        let subPokemons = subPokemonsOfRankingBySortKey[sortKey];
-        console.log(_.first(subPokemons).name + ' (Attacks: ' + _.map(subPokemons, 'attackType').join(', ') + ')');
-        subPokemonsByRanking[ranking].push(_.extend(_.first(subPokemons), {attackTypes: _.map(subPokemons, 'attackType').join(', ')}));
+        // console.log('attack.name: ' + attack.name);
+        // console.log('stabBonus: ' + stabBonus);
+        // console.log('bonusDamageToTarget: ' + bonusDamageToTarget);
+        // console.log('reducedDamageToTarget: ' + reducedDamageToTarget);
+        // console.log('pokemon.attack.attackRanking: ' + attack.attackRanking);
       });
+      pokemon.attacks = attacks;
     });
-    $scope.subPokemonsByRanking = subPokemonsByRanking;
+
+    rankedPokemon = _.sortBy(rankedPokemon, (pokemon) => {
+      return _.max(_.map(_.filter(pokemon.attacks, o => o.attackType === 'quick'), o => o.attackRanking * pokemon.attack * pokemon.defenceRanking));
+    }).reverse();
+
+    console.log('\n\nRESULTS:');
+    _.each(rankedPokemon, (pokemon) => {
+      console.log('\npokemon: ' + pokemon.name);
+
+      let attacksByAttackType = _.groupBy(pokemon.attacks, 'attackType'),
+        quickAttacks = _.sortBy(attacksByAttackType.quick, 'attackRanking').reverse(),
+        specialAttacks = _.sortBy(attacksByAttackType.special, 'attackRanking').reverse();
+
+      console.log('quick attacks:');
+      _.each(quickAttacks, (attack) => {
+        console.log(attack.name + ': ' + attack.attackRanking);
+      });
+      console.log('special attacks:');
+      _.each(specialAttacks, (attack) => {
+        console.log(attack.name + ': ' + attack.attackRanking);
+      });
+      pokemon.quickAttacks = quickAttacks;
+      pokemon.specialAttacks = specialAttacks;
+    });
+    $scope.rankedPokemon = rankedPokemon;
+
+
+    // let subPokemonRankings = _.uniq(_.map(subPokemonBySubKey, 'ranking')).sort().reverse();
+    // let subPokemonsByRanking = {};
+
+    // console.log('\n\nPokemons to use for attacking:');
+    // _.each(subPokemonRankings, (ranking) => {
+    //   if (parseFloat(ranking) <= 1) return true;
+
+    //   subPokemonsByRanking[ranking] = subPokemonsByRanking[ranking] || [];
+
+    //   let subPokemonsOfRanking = _.filter(subPokemonBySubKey, o => o.ranking === ranking),
+    //     subPokemonsOfRankingBySortKey = _.groupBy(subPokemonsOfRanking, o => _.padStart(o.ability, 10, '0') + '|' + o.name);
+    //   console.log('\n' + ranking   + ' multiplier against ' + targetPokemon.name + ' for: ');
+    //   _.each(_.keys(subPokemonsOfRankingBySortKey).sort().reverse(), (sortKey) => {
+    //     let subPokemons = subPokemonsOfRankingBySortKey[sortKey];
+    //     console.log(_.first(subPokemons).name + ' (Attacks: ' + _.map(subPokemons, 'attackType').join(', ') + ')');
+    //     subPokemonsByRanking[ranking].push(_.extend(_.first(subPokemons), {attackTypes: _.map(subPokemons, 'attackType').join(', ')}));
+    //   });
+    // });
+    // $scope.subPokemonsByRanking = subPokemonsByRanking;
 
   }
 
