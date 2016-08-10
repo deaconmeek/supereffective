@@ -1,41 +1,56 @@
 <div class="container">
   <div style="margin:20px;" class="row centered">
     <img style="max-height:80px" ng-src="img/pokemon/{{ target.id }}.png" />
-    <h2>{{ target.displayName }}</h2>
+    <h2>{{ getDisplayName(target) }}</h2>
     <table style="margin-left:auto;margin-right:auto;line-height:0.8em">
       <tr>
-        <td><strong>Type:</strong></td><td>{{ target.displayTypes }}</td>
+        <td><strong>Type:</strong></td><td>{{ target.types.join(', ') }}</td>
       </tr>
       <tr>
-        <td><strong>Strong against:</strong></td><td>{{ target.displayStrengths }}</td>
+        <td><strong>Strong defense against:</strong></td><td>{{ target.resistantTo.join(', ') }}</td>
       </tr>
       <tr>
-        <td><strong>Weak against:</strong></td><td>{{ target.displayWeaknesses }}</td>
+        <td><strong>Strong attack against:</strong></td><td>{{ target.bonusDamageTo.join(', ') }}</td>
+      </tr>
+      <tr>
+        <td><strong>Weak defense against:</strong></td><td>{{ target.succeptableTo.join(', ') }}</td>
+      </tr>
+      <tr>
+        <td><strong>Weak attack against:</strong></td><td>{{ target.reducedDamageTo.join(', ') }}</td>
       </tr>
     </table>
   </div>
 
-  <div class="row" ng-repeat="pokemon in rankedPokemon">
+  <div class="row" ng-repeat="opponent in opponents">
     <div class="three columns">
       <div style="margin-bottom:30px;" class="tile">
-        <img ng-src="img/pokemon/{{pokemon.id}}.png" />
-        <span class="tileName">{{ pokemon.displayName }}</span>
+        <img ng-src="img/pokemon/{{opponent.id}}.png" />
+        <span class="tileName">{{ getDisplayName(opponent) }}</span>
       </div>
     </div>
     <div class="nine columns">
-      <span>Defense: {{ pokemon.defenceRanking | number: 2  }} ({{ pokemon.defenceRanking * pokemon.defense | number: 0 }})</span><br />
+      <span>defenseMultiplier: {{ opponent.defenseMultiplier | number: 2 }}</span><br />
+      <!-- <span>attack: {{ opponent.attack | number: 2 }}</span><br />
+      <span>defense: {{ opponent.defense | number: 2 }}</span><br /> -->
       <span>Quick attacks:</span><br />
-      <div ng-repeat="quickAttack in pokemon.quickAttacks">
-        <span>{{ quickAttack.name}}: {{ quickAttack.attackRanking | number: 2 }} ({{ quickAttack.attackRanking * pokemon.attack | number: 0 }})</span><br />
+      <div ng-repeat="attack in opponent.quickAttacks">
+        <span>{{ attack.name}}: {{ attack.value | number: 2 }} ( {{ attack.dps | number: 2 }} * {{ opponent.attack / target.defense | number: 2 }} * {{ attack.attackMultiplier | number: 2 }} * {{ attack.stabBonus | number: 2 }} )</span><br />
+        <!-- <span>attack ratio: {{ opponent.attack / target.defense | number: 2 }}</span><br />
+        <span>dps: {{ attack.dps | number: 2 }}</span><br />
+        <span>multiplier: {{ attack.attackMultiplier | number: 2 }}</span><br />
+        <span>stab: {{ attack.stabBonus | number: 2 }}</span><br /> -->
       </div>
       <span>Special attacks:</span><br />
-      <div ng-repeat="specialAttack in pokemon.specialAttacks">
-        <span>{{ specialAttack.name}}: {{ specialAttack.attackRanking | number: 2  }}</span><br />
+      <div ng-repeat="attack in opponent.specialAttacks">
+        <span>{{ attack.name}}: {{ attack.value | number: 2 }}</span><br />
+        <!-- <span>dps: {{ attack.dps | number: 2 }}</span><br />
+        <span>multiplier: {{ attack.attackMultiplier | number: 2 }}</span><br />
+        <span>stab: {{ attack.stabBonus | number: 2 }}</span><br /> -->
       </div>
     </div>
     <hr />
   </div>
-  <!-- <div class="row">
+  <div class="row">
     <pre>{{ result }}</pre>
-  </div> -->
+  </div>
 </div>
