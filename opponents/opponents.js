@@ -5,16 +5,17 @@
 angular.module('pokemonFight.opponents', ['ngRoute'])
 
 .controller('OpponentsCtrl', function($scope, $routeParams, $http) {
-  $http.get('../data/pokemon2.json').success(function(data) {
+  $http.get('api/pokemon.json').success(function(data) {
     $scope.pokemons = data;
-    $http.get('../data/attacks3.json').success(function(data) {
+    $http.get('api/attacks.json').success(function(data) {
       $scope.attacks = data;
-      $http.get('../data/types2.json').success(function(data) {
+      $http.get('api/types.json').success(function(data) {
         $scope.types = augmentTypes(data);
 
         $scope.target = fetchTarget($routeParams.pokemonId, $scope.pokemons, $scope.types);
         $scope.opponents = fetchOpponents($scope.target, $scope.pokemons, $scope.attacks, $scope.types);
         $scope.getDisplayName = getDisplayName;
+        $scope._ = _;
       });
     });
   });
@@ -45,17 +46,14 @@ angular.module('pokemonFight.opponents', ['ngRoute'])
 
     let targetPokemon = pokemonById[targetPokemonId];
 
-    targetPokemon.resistantTo = _.uniq(_.flatten(_.map(targetPokemon.types, o => typeByName[o].resistantTo))).sort();
-    targetPokemon.succeptableTo = _.uniq(_.flatten(_.map(targetPokemon.types, o => typeByName[o].succeptableTo))).sort();
-    targetPokemon.bonusDamageTo = _.uniq(_.flatten(_.map(targetPokemon.types, o => typeByName[o].bonusDamageTo))).sort();
-    targetPokemon.reducedDamageTo = _.uniq(_.flatten(_.map(targetPokemon.types, o => typeByName[o].reducedDamageTo))).sort();
-
-    console.log('----------------');
-    console.log('Name: ' + targetPokemon.name);
-    console.log('Type: ' + targetPokemon.types.join(', '));
-    console.log('Resistant to: ' + targetPokemon.resistantTo.join(', '));
-    console.log('Succeptable to: ' + targetPokemon.succeptableTo.join(', '));
-    console.log('----------------');
+    let resistantTo = _.uniq(_.flatten(_.map(targetPokemon.types, o => typeByName[o].resistantTo))).sort();
+    let succeptableTo = _.uniq(_.flatten(_.map(targetPokemon.types, o => typeByName[o].succeptableTo))).sort();
+    let bonusDamageTo = _.uniq(_.flatten(_.map(targetPokemon.types, o => typeByName[o].bonusDamageTo))).sort();
+    let reducedDamageTo = _.uniq(_.flatten(_.map(targetPokemon.types, o => typeByName[o].reducedDamageTo))).sort();
+    targetPokemon.resistantTo = _.difference(resistantTo, succeptableTo);
+    targetPokemon.succeptableTo = _.difference(succeptableTo, resistantTo);
+    targetPokemon.bonusDamageTo = _.difference(bonusDamageTo, reducedDamageTo);
+    targetPokemon.reducedDamageTo = _.difference(reducedDamageTo, bonusDamageTo);
 
     return targetPokemon;
   }
