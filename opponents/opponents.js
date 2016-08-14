@@ -12,10 +12,16 @@ angular.module('pokemonFight.opponents', ['ngRoute'])
       $http.get('api/types.json').success(function(data) {
         $scope.types = augmentTypes(data);
 
+        $scope.test = sessionStorage.test;
+
         $scope.target = fetchTarget($routeParams.pokemonId, $scope.pokemons, $scope.types);
-        $scope.opponents = fetchOpponents($scope.target, $scope.pokemons, $scope.attacks, $scope.types);
+        $scope.opponents = augmentOpponents(fetchOpponents($scope.target, $scope.pokemons, $scope.attacks, $scope.types));
         $scope.getDisplayName = getDisplayName;
-        $scope._ = _;
+        $scope.getFullStars = getFullStars;
+        $scope.getHalfStars = getHalfStars;
+        $scope.getPositiveMultiplierCount = getPositiveMultiplierCount;
+        $scope.getNegativeMultiplierCount = getNegativeMultiplierCount;
+        $scope.showOpponentFull = showOpponentFull;
       });
     });
   });
@@ -23,11 +29,24 @@ angular.module('pokemonFight.opponents', ['ngRoute'])
   function getDisplayName(pokemon) {
     return _.padStart(pokemon.id, 3, '0') + ': ' + pokemon.name;
   }
-
-  console.log = function(string) {
-    $scope.result = $scope.result || "";
-    $scope.result += string + "\n";
-  };
+  function getFullStars(attack) {
+    return _.range(0, Math.floor(attack.value / 20) + 1);
+  }
+  function getHalfStars(attack) {
+    return _.range(0, Math.round(((attack.value / 20) % 1)));
+  }
+  function getPositiveMultiplierCount(pokemon, attack) {
+    return Math.max(0, Math.log(pokemon.defenseMultiplier * attack.attackMultiplier * attack.stabBonus) / Math.log(1.25));
+  }
+  function getNegativeMultiplierCount(pokemon, attack) {
+    return Math.max(0, Math.round(-1 * Math.log(pokemon.defenseMultiplier * attack.attackMultiplier * attack.stabBonus) / Math.log(1.25)));
+  }
+  function showOpponentFull(opponent) {
+    let isCollapsed = opponent.collapsedView;
+    _.each($scope.opponents, o => o.collapsedView = true);
+    opponent.collapsedView = !isCollapsed;
+    sessionStorage.test = 1;
+  }
 
   function augmentTypes(types) {
     _.each(types, (type) => {
@@ -37,6 +56,14 @@ angular.module('pokemonFight.opponents', ['ngRoute'])
       type.reducedDamageTo = _.map(_.filter(types, o => _.includes(o.resistantTo, type.name)), 'name');
     });
     return types;
+  }
+
+  function augmentOpponents(opponents) {
+    _.each(opponents, (opponent) => {
+      opponent.limit = 1;
+      opponent.collapsedView = true;
+    });
+    return opponents;
   }
 
   function fetchTarget(targetPokemonId, pokemons, types) {
@@ -107,10 +134,21 @@ angular.module('pokemonFight.opponents', ['ngRoute'])
       opponent.specialAttacks = _.sortBy(attacksByAttackType.special, 'value').reverse();
     });
 
-    opponents = _.sortBy(opponents, (opponent) => {
-      return _.max(_.map(opponent.quickAttacks, 'value'));
-    }).reverse();
+    let subOpponents = [];
+    _.each(opponents, (opponent) => {
+      _.each(opponent.quickAttacks, (quickAttack) => {
+        let subOpponent = _.cloneDeep(opponent);
+        subOpponent.quickAttacks = [quickAttack];
+        subOpponents.push(subOpponent);
+      });
+    });
 
-    return(opponents);
+    // opponents = _.sortBy(opponents, (opponent) => {
+    //   return _.max(_.map(opponent.quickAttacks, 'value'));
+    // }).reverse();
+
+    // return(opponents);
+    subOpponents = _.sortBy(subOpponents, o => _.first(o.quickAttacks).value).reverse();
+    return(subOpponents);
   }
 });

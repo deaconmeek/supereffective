@@ -1,39 +1,9 @@
 /* app css stylesheet */
-
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
-}
-
-.menu:before {
-  content: "[";
-}
-
-.menu:after {
-  content: "]";
-}
-
-.menu > li {
-  display: inline;
-}
-
-.menu > li:before {
-  content: "|";
-  padding-right: 0.3em;
-}
-
-.menu > li:nth-child(1):before {
-  content: "";
-  padding: 0;
-}
-
 .centered {
   text-align: center;
 }
 
-.tile {
+.target {
   width:140px;
   height:120px;
   float:left;
@@ -41,11 +11,10 @@
   position: relative;
 }
 
-.tile:hover {
+.target:hover {
   background-color: #eee;
 }
-
-.tile img {
+.target img {
   width: auto;
   max-width: 80px;
   height: auto;
@@ -55,8 +24,7 @@
   transform: translate(-50%, -80%);
   position: absolute;
 }
-
-.tileName {
+.targetName {
   float: left;
   position: absolute;
   top: 80%;
@@ -66,23 +34,90 @@
   color: #333;
 }
 
-.tileTag {
-  float: left;
-  position: absolute;
-  background-color:rgba(0, 0, 0, 0.6);
-  color: #FFF;
+.opponent {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90%;
+}
+.avatar {
+  position: relative;
+}
+.avatar img {
   left: 50%;
-  transform: translate(-50%, 0%);
-  white-space: nowrap;
-  font-size: 11px;
-  font-weight: bold;
-  border-radius: 4px;
-  width: 90%;
-  text-align: center;
-  padding: 0px 5px;
-  top: 100%;
+  transform: translate(-50%, -80%);
+  position: absolute;
 }
 
-.opponent {
-  font-size: 12px;
+.attackTable {
+  width: 100%;
+}
+.specialAttack.last td {
+  border-bottom: 0px none;
+  padding-bottom: 0px;
+}
+.stars {
+  min-width: 145px;
+}
+.attackName {
+  min-width: 120px;
+}
+
+.fa-star-half-o {
+  margin-left: -4px;
+}
+
+@media only screen and (max-width: 800px) {
+  .break {
+    display: none;
+  }
+  .avatar {
+    height: 40px;
+    width: 40px;
+    top: 0%;
+  }
+  .avatar img {
+    max-width: 40px;
+    max-height: 40px;
+    margin-top: 14px;
+    top: 50%;
+  }
+  .avatar span {
+    display: none;
+  }
+/*  .avatar img {
+    max-width: 90px;
+    max-height: 90px;
+  }
+  .avatar span {
+    font-size: 1.0em;
+    top: 95%;
+  }*/
+  .collapsedView .specialAttack{
+    display: none;
+  }
+  .attack td {
+    border-bottom: 0px none;
+    padding-bottom: 0px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .avatar {
+    height:150px;
+    width: 150px;
+    top: 20px;
+  }
+  .avatar img {
+    max-width: 110px;
+    max-height: 110px;
+    top: 65%;
+  }
+  .avatar span {
+    white-space: nowrap;
+    font-size: 1.3em;
+    color: #333;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    position: absolute;
+  }
 }

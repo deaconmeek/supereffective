@@ -2,9 +2,9 @@
   <h2 style="margin:20px;" class="centered">Choose a target:</h2>
   <div class="row">
     <a ng-repeat="pokemon in pokemons" ng-href="#/opponents/{{pokemon.id}}">
-      <div class="tile">
+      <div class="target">
         <img  ng-src="img/pokemon/{{pokemon.id}}.png" />
-        <span class="tileName">{{ pokemon.displayName }}</span>
+        <span class="targetName">{{ pokemon.displayName }}</span>
       </div>
     </a>
   </div>

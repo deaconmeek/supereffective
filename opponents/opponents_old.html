@@ -1,0 +1,95 @@
+<div class="container">
+  <div style="margin:20px;" class="row centered">
+    <img style="max-height:80px" ng-src="img/pokemon/{{ target.id }}.png" />
+    <h2>{{ getDisplayName(target) }}</h2>
+    <table style="margin-left:auto;margin-right:auto;line-height:0.8em">
+      <tr>
+        <td><strong>Type:</strong></td><td>{{ target.types.join(', ') }}</td>
+      </tr>
+      <tr>
+        <td><strong>Strong defense against:</strong></td><td>{{ target.resistantTo.join(', ') }}</td>
+      </tr>
+      <tr>
+        <td><strong>Strong attack against:</strong></td><td>{{ target.bonusDamageTo.join(', ') }}</td>
+      </tr>
+      <tr>
+        <td><strong>Weak defense against:</strong></td><td>{{ target.succeptableTo.join(', ') }}</td>
+      </tr>
+      <tr>
+        <td><strong>Weak attack against:</strong></td><td>{{ target.reducedDamageTo.join(', ') }}</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="row opponent" ng-repeat="opponent in opponents">
+    <div class="tile">
+      <img ng-click="showOpponentFull(opponent)" ng-src="img/pokemon/{{opponent.id}}.png" />
+      <span class="tileName">{{ getDisplayName(opponent) }}</span>
+    </div>
+    <table style="line-height:0.8em; margin-bottom:0px">
+      <tr ng-repeat="attack in opponent.quickAttacks | limitTo: opponent.limit">
+        <td>
+          <i class="fa fa-star" ng-repeat="n in getFullStars(attack)"></i>
+          <i class="fa fa-star-half-o " ng-repeat="n in getHalfStars(attack)"></i>
+          <!-- <i class="fa fa-star" ng-repeat="n in _.range(0, getPositiveMultiplierCount(opponent, attack))"></i>
+          <i class="fa fa-minus-circle" ng-repeat="n in _.range(0, getNegativeMultiplierCount(opponent, attack))"></i> -->
+        </td>
+<!--           <td>
+          <span>{{ attack.value | number: 0 }}</span>
+        </td> -->
+        <td>
+          <span>
+            {{ attack.name }}<!-- : {{ attack.value | number: 2 }} ( {{ attack.dps | number: 2 }} * {{ opponent.attack / target.defense | number: 2 }} * {{ attack.attackMultiplier | number: 2 }} * {{ attack.stabBonus | number: 2 }} ) -->
+            <!-- defense mutliplier: {{ Math.log(opponent.defenseMultiplier) / Math.log(1.25) }}
+            attack mutliplier: {{ Math.log(attack.attackMultiplier) / Math.log(1.25) }}
+            stab mutliplier: {{ Math.log(attack.stabBonus) / Math.log(1.25) }} -->
+          </span>
+        </td>
+      </tr>
+      <tr ng-repeat="attack in opponent.specialAttacks | limitTo: (opponent.limit-1)">
+        <td>
+          <i class="fa fa-star" ng-repeat="n in getFullStars(attack)"></i>
+          <i class="fa fa-star-half-o " ng-repeat="n in getHalfStars(attack)"></i>
+          <!-- <i class="fa fa-star" ng-repeat="n in _.range(0, getPositiveMultiplierCount(opponent, attack))"></i>
+          <i class="fa fa-minus-circle" ng-repeat="n in _.range(0, getNegativeMultiplierCount(opponent, attack))"></i> -->
+        </td>
+<!--           <td>
+          <span>{{ attack.value | number: 0 }}</span>
+        </td> -->
+        <td>
+          <span>
+            {{ attack.name}}<!-- : {{ attack.value | number: 2 }} ( {{ attack.dps | number: 2 }} * {{ opponent.attack / target.defense | number: 2 }} * {{ attack.attackMultiplier | number: 2 }} * {{ attack.stabBonus | number: 2 }} ) -->
+            <!-- defense mutliplier: {{ Math.log(opponent.defenseMultiplier) / Math.log(1.25) }}
+            attack mutliplier: {{ Math.log(attack.attackMultiplier) / Math.log(1.25) }}
+            stab mutliplier: {{ Math.log(attack.stabBonus) / Math.log(1.25) }} -->
+          </span>
+        </td>
+        <td>
+          <img style="max-width:60px" ng-src="img/bars/{{ attack.bars }}.png" />
+        </td>
+      </tr>
+    </table>
+    <!-- <span>defenseMultiplier: {{ opponent.defenseMultiplier | number: 2 }}</span><br />
+    <span>attack: {{ opponent.attack | number: 2 }}</span><br />
+    <span>defense: {{ opponent.defense | number: 2 }}</span><br />
+    <div ng-repeat="attack in opponent.quickAttacks">
+      <i class="fa fa-star" ng-repeat="n in _.range(0, _.floor(attack.value/15))"></i>
+      <span>{{ attack.name}}: {{ attack.value | number: 2 }} ( {{ attack.dps | number: 2 }} * {{ opponent.attack / target.defense | number: 2 }} * {{ attack.attackMultiplier | number: 2 }} * {{ attack.stabBonus | number: 2 }} )</span><br />
+      <span>attack ratio: {{ opponent.attack / target.defense | number: 2 }}</span><br />
+      <span>dps: {{ attack.dps | number: 2 }}</span><br />
+      <span>multiplier: {{ attack.attackMultiplier | number: 2 }}</span><br />
+      <span>stab: {{ attack.stabBonus | number: 2 }}</span><br />
+    </div>
+    <div ng-repeat="attack in opponent.specialAttacks">
+      <i class="fa fa-star" ng-repeat="n in _.range(0, _.floor(attack.value/30))"></i>
+      <span>{{ attack.name}}: {{ attack.value | number: 2 }}</span><br />
+      <span>dps: {{ attack.dps | number: 2 }}</span><br />
+      <span>multiplier: {{ attack.attackMultiplier | number: 2 }}</span><br />
+      <span>stab: {{ attack.stabBonus | number: 2 }}</span><br />
+    </div> -->
+    <!-- <hr /> -->
+  </div>
+  <div class="row">
+    <pre>{{ result }}</pre>
+  </div>
+</div>
