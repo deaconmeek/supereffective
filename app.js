@@ -4,7 +4,8 @@
 angular.module('pokemonFight', [
   'ngRoute',
   'pokemonFight.target',
-  'pokemonFight.opponents'
+  'pokemonFight.opponents',
+  'pokemonFight.mypokemon'
 ]).
 config(function($locationProvider, $routeProvider) {
 
@@ -14,5 +15,6 @@ config(function($locationProvider, $routeProvider) {
   when("/api/types", {templateUrl: "api/types.json"}).
   when("/target", {templateUrl: "target/target.html", controller: "TargetCtrl"}).
   when("/opponents/:pokemonId", {templateUrl: "opponents/opponents.html", controller: "OpponentsCtrl"}).
+  when("/mypokemon", {templateUrl: "mypokemon/mypokemon.html", controller: "MyPokemonCtrl"}).
   otherwise({redirectTo: '/target'});
 });

@@ -1,0 +1,29 @@
+<div class="container">
+  <h2 style="margin:20px;" class="centered">My pokemon:</h2>
+  <div class="row centered">
+    <a ng-click="bulkSet(null, true)">select all</a>  |  <a ng-click="bulkSet(null, false)">select none</a>
+    <br /><span>Search:</span><input ng-model="query" />
+    <table style="width:100%">
+      <tr class="myPokemon" ng-class="{disabled:isDisabled(pokemon.id), enabled:!isDisabled(pokemon.id)}" ng-repeat="pokemon in pokemons | filter:query track by pokemon.id">
+        <td>
+          <div class="avatar" ng-click="toggle(pokemon.id)">
+            <img ng-src="img/pokemon/{{pokemon.id}}.png" />
+            <span>{{ getDisplayName(pokemon) }}</span>
+          </div>
+        </td>
+        <td>
+          <div class="attackTable">
+            <label style="height:19px" ng-repeat="attack in pokemon.quickAttacks" class="attack quickAttack">
+              <input type="checkbox" ng-model="myPokemons[pokemon.id][attack.name]"></input>
+              {{ attack.name }}
+            </label>
+            <label style="height:19px" ng-repeat="attack in pokemon.specialAttacks" class="attack specialAttack">
+              <input type="checkbox" ng-model="myPokemons[pokemon.id][attack.name]"></input>
+              {{ attack.name }}
+            </label>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

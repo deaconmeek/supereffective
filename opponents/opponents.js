@@ -12,8 +12,6 @@ angular.module('pokemonFight.opponents', ['ngRoute'])
       $http.get('api/types.json').success(function(data) {
         $scope.types = augmentTypes(data);
 
-        $scope.test = sessionStorage.test;
-
         $scope.target = fetchTarget($routeParams.pokemonId, $scope.pokemons, $scope.types);
         $scope.opponents = augmentOpponents(fetchOpponents($scope.target, $scope.pokemons, $scope.attacks, $scope.types));
         $scope.getDisplayName = getDisplayName;
@@ -22,9 +20,28 @@ angular.module('pokemonFight.opponents', ['ngRoute'])
         $scope.getPositiveMultiplierCount = getPositiveMultiplierCount;
         $scope.getNegativeMultiplierCount = getNegativeMultiplierCount;
         $scope.showOpponentFull = showOpponentFull;
+        $scope.showAllPokemon = showAllPokemon;
+        $scope.showMyPokemon = showMyPokemon;
       });
     });
   });
+
+  function showAllPokemon() {
+    _.each($scope.opponents, (opponent) => {
+      opponent.notAvailable = false;
+    });
+  }
+
+  function showMyPokemon() {
+    let myPokemons = JSON.parse(localStorage.myPokemons);
+    _.each($scope.opponents, (opponent) => {
+      let quickAttackName = _.first(opponent.quickAttacks).name;
+      opponent.notAvailable = !myPokemons[opponent.id][quickAttackName];
+      _.each(opponent.specialAttacks, (attack) => {
+        attack.notAvailable = !myPokemons[opponent.id][attack.name];
+      });
+    });
+  }
 
   function getDisplayName(pokemon) {
     return _.padStart(pokemon.id, 3, '0') + ': ' + pokemon.name;
@@ -43,9 +60,7 @@ angular.module('pokemonFight.opponents', ['ngRoute'])
   }
   function showOpponentFull(opponent) {
     let isCollapsed = opponent.collapsedView;
-    _.each($scope.opponents, o => o.collapsedView = true);
     opponent.collapsedView = !isCollapsed;
-    sessionStorage.test = 1;
   }
 
   function augmentTypes(types) {
