@@ -6,13 +6,18 @@ angular.module('pokemonFight.mypokemon', ['ngRoute'])
   $http.get('api/attacks.json').success(function(attacks) {
     let attacksByName = _.keyBy(attacks, 'name');
     $http.get('api/pokemon.json').success(function(pokemons) {
+
+      $scope.pokemons = pokemons;
+      $scope.myPokemons = _getMyPokemons();
+
+      $scope.pokemonsById = {};
       _.each(pokemons, pokemon => {
         pokemon.displayName = _.padStart(pokemon.id, 3, '0') + ': ' + pokemon.name;
         pokemon.quickAttacks = _.map(pokemon.quickAttacks, o => attacksByName[o]);
         pokemon.specialAttacks = _.map(pokemon.specialAttacks, o => attacksByName[o]);
+        $scope.pokemonsById[pokemon.id] = pokemon;
+        checkAvailability(pokemon.id);
       });
-      $scope.pokemons = pokemons;
-      $scope.myPokemons = _getMyPokemons();
       $scope.bulkSet = bulkSet;
       $scope.isDisabled = isDisabled;
       $scope.toggle = toggle;
@@ -25,6 +30,9 @@ angular.module('pokemonFight.mypokemon', ['ngRoute'])
     });
   });
 
+  function checkAvailability(pokemonId) {
+    $scope.pokemonsById[pokemonId].isAvailable = !isDisabled(pokemonId);
+  }
   function isDisabled(pokemonId) {
     let pokemon = _getMyPokemon(pokemonId);
     return !_.some(pokemon);
@@ -46,6 +54,7 @@ angular.module('pokemonFight.mypokemon', ['ngRoute'])
       _.each(myPokemons[pokemonId], (available, attackName) => {
         myPokemons[pokemonId][attackName] = newValue;
       });
+      checkAvailability(pokemonId);
     });
     _setMyPokemons(myPokemons);
   }
@@ -55,11 +64,21 @@ angular.module('pokemonFight.mypokemon', ['ngRoute'])
   }
 
   function _getMyPokemons() {
+    if ($scope.myPokemons) {
+      return $scope.myPokemons;
+    }
+    else {
+      return _initMyPokemons();
+    }
+  }
+
+  function _initMyPokemons() {
     let myPokemons;
     try {
       myPokemons = localStorage.myPokemons ? JSON.parse(localStorage.myPokemons) : {};
     }
     catch (e) {
+      console.log('Error parsing localstorage: ' + e);
       myPokemons = {};
     }
 
@@ -67,8 +86,8 @@ angular.module('pokemonFight.mypokemon', ['ngRoute'])
       myPokemons = {};
       _.each($scope.pokemons, (pokemon) => {
         myPokemons[pokemon.id] = {};
-        _.each(pokemon.quickAttacks, o => myPokemons[pokemon.id][o.name] = true);
-        _.each(pokemon.specialAttacks, o => myPokemons[pokemon.id][o.name] = true);
+        _.each(pokemon.quickAttacks, o => myPokemons[pokemon.id][o.name] = false);
+        _.each(pokemon.specialAttacks, o => myPokemons[pokemon.id][o.name] = false);
       });
       console.log('Initialising myPokemons..');
       $scope.myPokemons = myPokemons;

@@ -14,14 +14,22 @@ angular.module('pokemonFight.opponents', ['ngRoute'])
 
         $scope.target = fetchTarget($routeParams.pokemonId, $scope.pokemons, $scope.types);
         $scope.opponents = augmentOpponents(fetchOpponents($scope.target, $scope.pokemons, $scope.attacks, $scope.types));
-        $scope.getDisplayName = getDisplayName;
         $scope.getFullStars = getFullStars;
         $scope.getHalfStars = getHalfStars;
         $scope.getPositiveMultiplierCount = getPositiveMultiplierCount;
         $scope.getNegativeMultiplierCount = getNegativeMultiplierCount;
-        $scope.showOpponentFull = showOpponentFull;
+        $scope.toggleOpponent = toggleOpponent;
         $scope.showAllPokemon = showAllPokemon;
         $scope.showMyPokemon = showMyPokemon;
+
+        $scope.target.displayName = _.padStart($scope.target.id, 3, '0') + ': ' + $scope.target.name;
+        _.each($scope.opponents, opponent => {
+          opponent.displayName = _.padStart(opponent.id, 3, '0') + ': ' + opponent.name;
+          opponent.collapsedView = true;
+        });
+
+        $scope.showAllPokemonMode = false;
+        showMyPokemon();
       });
     });
   });
@@ -30,27 +38,26 @@ angular.module('pokemonFight.opponents', ['ngRoute'])
     _.each($scope.opponents, (opponent) => {
       opponent.notAvailable = false;
     });
+    $scope.showAllPokemonMode = true;
   }
 
   function showMyPokemon() {
     let myPokemons = JSON.parse(localStorage.myPokemons);
     _.each($scope.opponents, (opponent) => {
-      let quickAttackName = _.first(opponent.quickAttacks).name;
+      let quickAttackName = opponent.primaryAttack.name;
       opponent.notAvailable = !myPokemons[opponent.id][quickAttackName];
       _.each(opponent.specialAttacks, (attack) => {
         attack.notAvailable = !myPokemons[opponent.id][attack.name];
       });
     });
+    $scope.showAllPokemonMode = false;
   }
 
-  function getDisplayName(pokemon) {
-    return _.padStart(pokemon.id, 3, '0') + ': ' + pokemon.name;
-  }
   function getFullStars(attack) {
-    return _.range(0, Math.floor(attack.value / 20) + 1);
+    return _.range(0, Math.floor((attack.value + 10) / 20));
   }
   function getHalfStars(attack) {
-    return _.range(0, Math.round(((attack.value / 20) % 1)));
+    return _.range(0, Math.round((((attack.value + 10) / 20) % 1)));
   }
   function getPositiveMultiplierCount(pokemon, attack) {
     return Math.max(0, Math.log(pokemon.defenseMultiplier * attack.attackMultiplier * attack.stabBonus) / Math.log(1.25));
@@ -58,7 +65,7 @@ angular.module('pokemonFight.opponents', ['ngRoute'])
   function getNegativeMultiplierCount(pokemon, attack) {
     return Math.max(0, Math.round(-1 * Math.log(pokemon.defenseMultiplier * attack.attackMultiplier * attack.stabBonus) / Math.log(1.25)));
   }
-  function showOpponentFull(opponent) {
+  function toggleOpponent(opponent) {
     let isCollapsed = opponent.collapsedView;
     opponent.collapsedView = !isCollapsed;
   }
@@ -112,13 +119,14 @@ angular.module('pokemonFight.opponents', ['ngRoute'])
     let opponents = _.cloneDeep(pokemons);
     _.each(opponents, (opponent) => {
 
-      // This formula assumes that the target pokemon will attack with his base types (for calculating defense multipliers)
-      let opponentTypes = _.map(opponent.types, o => typeByName[o]);
+      // This formula assumes that the target pokemon will attack with all their attack types (for calculating defense multipliers)
+      let opponentTypes = _.map(opponent.types, o => typeByName[o]),
+        targetAttackTypes = _.uniq(_.map(_.map(_.union(targetPokemon.quickAttacks, targetPokemon.specialAttacks), o => attackByName[o]), 'attackType'));
 
-      opponent.resistantToTarget = _.chain(opponentTypes).map('resistantTo').flatten().uniq().intersection(targetPokemonTypes).value();
-      opponent.succeptableToTarget = _.chain(opponentTypes).map('succeptableTo').flatten().uniq().intersection(targetPokemonTypes).value();
-      opponent.bonusDamageToTarget = _.chain(opponentTypes).map('succeptableTo').flatten().uniq().intersection(targetPokemonTypes).value();
-      opponent.reducedDamageToTarget = _.chain(opponentTypes).map('succeptableTo').flatten().uniq().intersection(targetPokemonTypes).value();
+      opponent.resistantToTarget = _.chain(opponentTypes).map('resistantTo').flatten().uniq().intersection(targetAttackTypes).value();
+      opponent.succeptableToTarget = _.chain(opponentTypes).map('succeptableTo').flatten().uniq().intersection(targetAttackTypes).value();
+      opponent.bonusDamageToTarget = _.chain(opponentTypes).map('succeptableTo').flatten().uniq().intersection(targetAttackTypes).value();
+      opponent.reducedDamageToTarget = _.chain(opponentTypes).map('succeptableTo').flatten().uniq().intersection(targetAttackTypes).value();
 
       opponent.defenseMultiplier =
         Math.pow(1.25, opponent.resistantToTarget.length) *
@@ -127,7 +135,6 @@ angular.module('pokemonFight.opponents', ['ngRoute'])
       let opponentAttacks = _.cloneDeep(_.map(_.union(opponent.quickAttacks, opponent.specialAttacks), o => attackByName[o]));
       _.each(opponentAttacks, (attack) => {
 
-        attack.value2 = JSON.stringify(attack.name);
         let attackType = typeByName[attack.type],
           bonusDamageToTarget = _.intersection(attackType.bonusDamageTo, targetPokemonTypes),
           reducedDamageToTarget = _.intersection(attackType.reducedDamageTo, targetPokemonTypes);
@@ -153,7 +160,7 @@ angular.module('pokemonFight.opponents', ['ngRoute'])
     _.each(opponents, (opponent) => {
       _.each(opponent.quickAttacks, (quickAttack) => {
         let subOpponent = _.cloneDeep(opponent);
-        subOpponent.quickAttacks = [quickAttack];
+        subOpponent.primaryAttack = quickAttack;
         subOpponents.push(subOpponent);
       });
     });
@@ -163,7 +170,7 @@ angular.module('pokemonFight.opponents', ['ngRoute'])
     // }).reverse();
 
     // return(opponents);
-    subOpponents = _.sortBy(subOpponents, o => _.first(o.quickAttacks).value).reverse();
+    subOpponents = _.sortBy(subOpponents, o => o.primaryAttack.value).reverse();
     return(subOpponents);
   }
 });

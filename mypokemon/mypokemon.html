@@ -1,29 +1,40 @@
 <div class="container">
-  <h2 style="margin:20px;" class="centered">My pokemon:</h2>
   <div class="row centered">
-    <a ng-click="bulkSet(null, true)">select all</a>  |  <a ng-click="bulkSet(null, false)">select none</a>
-    <br /><span>Search:</span><input ng-model="query" />
-    <table style="width:100%">
-      <tr class="myPokemon" ng-class="{disabled:isDisabled(pokemon.id), enabled:!isDisabled(pokemon.id)}" ng-repeat="pokemon in pokemons | filter:query track by pokemon.id">
-        <td>
-          <div class="avatar" ng-click="toggle(pokemon.id)">
-            <img ng-src="img/pokemon/{{pokemon.id}}.png" />
-            <span>{{ getDisplayName(pokemon) }}</span>
+    <div class="nav">
+      <a href="#/target">select target</a>|<a href="#/mypokemon" class="selected">my pokemon</a>
+    </div>
+    <input autofocus placeholder="Search..." type="text" value=""  ng-model="query" />
+
+    <div class="my-pokemon">
+      <h3 class="header">caught pokemon</h3>
+      <ul>
+        <li ng-repeat="pokemon in pokemons | filter:{displayName:query, isAvailable:true}">
+          <div class="avatar-large">
+            <img ng-src="img/pokemon_sml3/{{pokemon.id}}.png" />
+            <span class="avatar2-name">{{ pokemon.displayName }}</span>
           </div>
-        </td>
-        <td>
-          <div class="attackTable">
+          <div class="spacer"></div>
+          <div class="detail">
             <label style="height:19px" ng-repeat="attack in pokemon.quickAttacks" class="attack quickAttack">
               <input type="checkbox" ng-model="myPokemons[pokemon.id][attack.name]"></input>
-              {{ attack.name }}
+              <span>{{ attack.name }}</span>
+              <span class="tag">{{ attack.type }}</span>
             </label>
             <label style="height:19px" ng-repeat="attack in pokemon.specialAttacks" class="attack specialAttack">
               <input type="checkbox" ng-model="myPokemons[pokemon.id][attack.name]"></input>
-              {{ attack.name }}
+              <span>{{ attack.name }}</span>
+              <span class="tag">{{ attack.type }}</span>
             </label>
           </div>
-        </td>
-      </tr>
-    </table>
+        </li>
+      </ul>
+    </div>
+    <div class="other-pokemon">
+      <h3 class="header">uncaught pokemon</h3>
+      <div class="tile avatar-large" ng-click="bulkSet(pokemon.id, true)" ng-repeat="pokemon in pokemons | filter:{displayName:query, isAvailable:false}">
+        <img ng-src="img/pokemon_sml3/{{pokemon.id}}.png" />
+        <span class="avatar2-name">{{ pokemon.displayName }}</span>
+      </div>
+    </div>
   </div>
 </div>

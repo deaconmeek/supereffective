@@ -6,136 +6,239 @@
   display: none;
 }
 
-.target {
-  width:140px;
-  height:120px;
-  float:left;
-  margin:5px;
-  position: relative;
+.nav {
+  margin: 20px 0 40px 0;
+}
+.nav a {
+  text-decoration: none;
+  color: #666;
+  font-size: 1.1em;
+  margin: 0 20px;
+  cursor: pointer;
+}
+.nav a:hover {
+  color: #4EA6EA;
+}
+.nav .selected {
+  font-weight: bold;
+  border-bottom: 1px solid;
+}
+.subnav {
+  font-size: 1.0em;
 }
 
-.target:hover {
-  background-color: #eee;
+.header {
+  font-size: 1.4em;
+  border-bottom: 1px solid;
+  width: 70%;
+  padding-left: 10px;
+  text-align: left;
+  margin: 10px 0 20px 0;
 }
-.target img {
-  width: auto;
-  max-width: 80px;
-  height: auto;
-  max-height: 80px;
-  top: 65%;
-  left: 50%;
-  transform: translate(-50%, -80%);
-  position: absolute;
+.subheader {
+  font-size: 1.0em;
+  padding-left: 0;
+  margin: 10px 0 5px 0;
+  width: 60%;
+  text-align: left;
+  border-bottom: 1px solid;
+  border-color: #DDD;
 }
-.targetName {
-  float: left;
-  position: absolute;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, 0%);
+
+input[type=text] {
+  width: 100%;
+  border: 0px;
+  border-bottom: 1px solid #EBEBEB;
+  border-radius: 0px;
+  background-color: transparent;
+}
+input[type=text]:focus {
+  border: 0px;
+  border-bottom: 2px solid #4EA6EA;
+}
+.spacer {
+  display: inline-block;
+  margin-right: 8%;
+}
+
+.avatar-large {
+  display: inline-block;
+  text-align: center;
+  width: 110px;
+}
+.avatar-large img {
+  display: block;
+  margin: 0 auto;
+  width: 80px;
+}
+.avatar-small {
+  display: inline-block;
+  text-align: left;
+  width: 110px;
+  padding: 0 2%;
+}
+.avatar-small img {
+  display: block;
+  margin: 0 0 -5px 0;
+  width: 46px;
+}
+.tile {
+  text-decoration: none;
+  color: #666;
+  padding: 1%;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+.tile:hover {
+  cursor: pointer;
+  background: #EEE;
+  border-radius: 5px;
+}
+.tag {
+  background-color: #BBB;
+  border-radius: 5px;
+  padding: 3px 5px;
+  font-size: 0.7em;
+  color: #FFF;
+}
+.attack {
+  font-size: 0.9em;
+  font-weight: 400;
+}
+
+
+.my-pokemon {
+  margin: 20px 0;
+}
+.my-pokemon li, .opponents li {
+  list-style-type: none;
+  text-align: left;
+  border-bottom: 1px solid #DDD;
+}
+.my-pokemon .detail {
+  display: inline-block;
+  width: 55%;
+  text-align: left;
+  text-overflow: ellipsis;
   white-space: nowrap;
-  color: #333;
+  overflow: hidden;
+}
+.my-pokemon .attack span:first-of-type {
+  width: 55%;
+  display: inline-block;
+}
+.other-pokemon, .targets {
+  margin: 40px 0;
+  text-align: left;
 }
 
-.opponent {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 90%;
-}
-.avatar {
-  position: relative;
-}
-.avatar img {
-  left: 50%;
-  transform: translate(-50%, -80%);
-  position: absolute;
-}
 
-.attackTable {
+.target-avatar {
+  display: inline-block;
+  text-align: center;
+  font-size: 2.2em;
+  margin-bottom: 50px;
+}
+.target-avatar img {
+  display: block;
+  margin: 0 auto;
+}
+.types-table {
+  margin-left:auto;
+  margin-right:auto;
+  line-height: 01.2em;
+  table-layout: fixed;
   width: 100%;
 }
-.specialAttack.last td {
-  border-bottom: 0px none;
-  padding-bottom: 0px;
+.types-table td {
+  vertical-align: top;
+  padding: 7px 2%;
 }
-/*.stars {
-  min-width: 145px;
+.types-table td:first-child {
+  /*width: 55%;*/
 }
-.attackName {
-  min-width: 120px;
-}*/
+.opponents {
+}
+.opponents .detail {
+  width: 100%;
+  text-align: left;
+  padding: 0 2%;
+  overflow: hidden;
+}
+.opponents .detail .stars,.opponents .detail .attack-name {
+  width: 38%;
+  display: inline-block;
+}
+.opponents .detail .bars {
+  width: 18%;
+  display: inline-block;
+}
+.opponents .detail .bars img {
+  max-width: 100px;
+  width: 100%;
+}
+.opponents .collapsed .detail {
+  max-height: 0;
+  -webkit-transition: height, 0.3s ease;
+  -moz-transition: height, 0.3s ease;
+  -ms-transition: height, 0.3s ease;
+  -o-transition: height, 0.3s ease;
+  transition: height, 0.3s ease;
+}
+.opponents .expanded .detail {
+  max-height: 300px;
+  -webkit-transition:height, 0.3s ease;
+  -moz-transition: height, 0.3s ease;
+  -ms-transition: height, 0.3s ease;
+  -o-transition: height, 0.3s ease;
+  transition: height, 0.3s ease;
+}
 
-.fa-star-half-o {
-  margin-left: -4px;
+.opponents .expanded .avatar-large img {
+  /*width: 80px;*/
+}
+.opponents .summary {
+  display: inline-block;
+  width: 68%;
+  vertical-align: top;
+}
+.opponents .summary span {
+  display: inline-block;
+}
+.opponents .summary .attack-name {
+  /*width: 30%;*/
 }
 
-.myPokemon.disabled img {
-  filter: gray; /* IE6-9 */
-  filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
-  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+@media only screen and (min-width: 320px) and (max-width: 500px) {
+  .avatar-large {
+    width: 30%;
+  }
+  .avatar-small {
+    width: 25%;
+  }
+  .tile {
+    font-size: 3.0vw;
+  }
 }
-.myPokemon.enabled img {
-  filter: none;
-  -webkit-filter: grayscale(0);
-}
-.myPokemon img:hover {
-  filter: gray; /* IE6-9 */
-  filter: grayscale(0.5); /* Microsoft Edge and Firefox 35+ */
-  -webkit-filter: grayscale(0.5); /* Google Chrome, Safari 6+ & Opera 15+ */
-}
-
 @media only screen and (min-width: 320px) and (max-width: 768px) {
-  .break {
-    display: none;
+  .container {
+    width: 95%;
   }
-  .avatar {
-    height: 40px;
-    width: 40px;
-    top: 0%;
+  .target-avatar {
+    font-size: 7vw;
+    margin-bottom: 25px;
   }
-  .avatar img {
-    max-width: 40px;
-    max-height: 40px;
-    margin-top: 14px;
-    top: 50%;
+  .types-table {
+    font-size: 0.9em;
   }
-  .avatar span {
-    display: none;
-  }
-/*  .avatar img {
-    max-width: 90px;
-    max-height: 90px;
-  }
-  .avatar span {
+  .nav a {
     font-size: 1.0em;
-    top: 95%;
-  }*/
-  .collapsedView .specialAttack{
-    display: none;
+    margin: 0 2%;
   }
-  .attack td {
-    border-bottom: 0px none;
-    padding-bottom: 0px;
+  .subnav a {
+    font-size: 1.0em;
+    margin: 0 10px;
   }
 }
-@media only screen and (min-width: 768px) {
-  .avatar {
-    height:150px;
-    width: 150px;
-    top: 20px;
-  }
-  .avatar img {
-    max-width: 110px;
-    max-height: 110px;
-    top: 65%;
-  }
-  .avatar span {
-    white-space: nowrap;
-    font-size: 1.3em;
-    color: #333;
-    top: 95%;
-    left: 50%;
-    transform: translate(-50%, -80%);
-    position: absolute;
-  }
+@media only screen and (min-width: 768) {
 }

@@ -1,102 +1,101 @@
 <div class="container">
-  <div style="margin:20px;" class="row centered">
-    <img style="max-height:80px" ng-src="img/pokemon/{{ target.id }}.png" />
-    <h2>{{ getDisplayName(target) }}</h2>
-    <a ng-click="showAllPokemon()">show all pokemon</a>  |  <a ng-click="showMyPokemon()">show my pokemon only</a>
-    <table style="margin-left:auto;margin-right:auto;line-height:0.8em">
+  <div class="row centered">
+    <div class="nav">
+      <a href="#/target">select target</a>|<a href="#/mypokemon">my pokemon</a>
+    </div>
+
+    <div class="target-avatar">
+      <img ng-src="img/pokemon/{{ target.id }}.png" />
+      <span>{{ target.displayName }}</span>
+    </div>
+
+    <!-- <div class="types" style="text-align:left;">
+      <strong>Type:</strong><span>{{ target.types.join(', ') }}</span>
+      <div class="subheader">Strong against:</div>
+      <strong>Attack:</strong><span>{{ target.bonusDamageTo.join(', ') }}</span><br />
+      <strong>Defense:</strong><span>{{ target.resistantTo.join(', ') }}</span>
+      <div class="subheader">Weak against:</div>
+      <strong>Attack:</strong><span>{{ target.reducedDamageTo.join(', ') }}</span>
+      <strong>Defense:</strong><span>{{ target.succeptableTo.join(', ') }}</span><br />
+    </div> -->
+    <table class="types-table">
       <tr>
         <td><strong>Type:</strong></td><td>{{ target.types.join(', ') }}</td>
-      </tr>
-      <tr>
-        <td><strong>Strong defense against:</strong></td><td>{{ target.resistantTo.join(', ') }}</td>
       </tr>
       <tr>
         <td><strong>Strong attack against:</strong></td><td>{{ target.bonusDamageTo.join(', ') }}</td>
       </tr>
       <tr>
-        <td><strong>Weak defense against:</strong></td><td>{{ target.succeptableTo.join(', ') }}</td>
+        <td><strong>Strong defense against:</strong></td><td>{{ target.resistantTo.join(', ') }}</td>
       </tr>
       <tr>
         <td><strong>Weak attack against:</strong></td><td>{{ target.reducedDamageTo.join(', ') }}</td>
       </tr>
+      <tr>
+        <td><strong>Weak defense against:</strong></td><td>{{ target.succeptableTo.join(', ') }}</td>
+      </tr>
+      <!-- <tr>
+        <td><strong>Type:</strong></td><td>{{ target.types.join(', ') }}</td>
+      </tr>
+      <tr>
+        <td><strong>Strong attack against:</strong></td><td><span ng-repeat="type in target.bonusDamageTo" class="tag">{{type}}</span></td>
+      </tr>
+      <tr>
+        <td><strong>Strong defense against:</strong></td><td><span ng-repeat="type in target.resistantTo" class="tag">{{type}}</span></td>
+      </tr>
+      <tr>
+        <td><strong>Weak attack against:</strong></td><td><span ng-repeat="type in target.reducedDamageTo" class="tag">{{type}}</span></td>
+      </tr>
+      <tr>
+        <td><strong>Weak defense against:</strong></td><td><span ng-repeat="type in target.succeptableTo" class="tag">{{type}}</span></td>
+      </tr> -->
     </table>
   </div>
   <div class="row centered">
-    <table style="width:100%">
-      <tr class="opponent" ng-repeat="opponent in opponents" ng-click="showOpponentFull(opponent)" ng-class="{collapsedView: opponent.collapsedView, hidden: opponent.notAvailable}">
-        <td>
-          <div class="avatar">
-            <img ng-src="img/pokemon/{{opponent.id}}.png" />
-            <span>{{ getDisplayName(opponent) }}</span>
+    <div class="nav subnav">
+      <a ng-click="showMyPokemon()" ng-class="{selected:!showAllPokemonMode}">my pokemon</a>
+      <span>|</span>
+      <a ng-click="showAllPokemon()" ng-class="{selected:showAllPokemonMode}">all pokemon</a>
+    </div>
+
+    <div class="opponents">
+      <ul>
+        <li ng-repeat="opponent in opponents" ng-click="toggleOpponent(opponent)" ng-class="{collapsed: opponent.collapsedView, expanded: !opponent.collapsedView, hidden: opponent.notAvailable}">
+          <div class="avatar-small">
+            <img ng-src="img/pokemon_sml3/{{opponent.id}}.png" />
           </div>
-        </td>
-        <td>
-          <div class="attackTable">
-            <table style="line-height:0.8em; margin-bottom:0px">
-              <tr ng-repeat="attack in opponent.quickAttacks" class="attack quickAttack">
-                <br class="break"/>
-                  <td class="stars">
-                  <i class="fa fa-star" ng-repeat="n in getFullStars(attack)"></i>
-                  <i class="fa fa-star-half-o " ng-repeat="n in getHalfStars(attack)"></i>
-                  <!-- <i class="fa fa-star" ng-repeat="n in _.range(0, getPositiveMultiplierCount(opponent, attack))"></i>
-                  <i class="fa fa-minus-circle" ng-repeat="n in _.range(0, getNegativeMultiplierCount(opponent, attack))"></i> -->
-                </td>
-        <!--           <td>
-                  <span>{{ attack.value | number: 0 }}</span>
-                </td> -->
-                <td class="attackName">
-                  <span>
-                    {{ attack.name }}<!-- : {{ attack.value | number: 2 }} ( {{ attack.dps | number: 2 }} * {{ opponent.attack / target.defense | number: 2 }} * {{ attack.attackMultiplier | number: 2 }} * {{ attack.stabBonus | number: 2 }} ) -->
-                    <!-- defense mutliplier: {{ Math.log(opponent.defenseMultiplier) / Math.log(1.25) }}
-                    attack mutliplier: {{ Math.log(attack.attackMultiplier) / Math.log(1.25) }}
-                    stab mutliplier: {{ Math.log(attack.stabBonus) / Math.log(1.25) }} -->
-                  </span>
-                </td>
-              </tr>
-              <tr ng-repeat="attack in opponent.specialAttacks" ng-class="{last: $last, hidden: attack.notAvailable}" class="attack specialAttack">
-                <td class="stars">
-                  <i class="fa fa-star" ng-repeat="n in getFullStars(attack)"></i>
-                  <i class="fa fa-star-half-o " ng-repeat="n in getHalfStars(attack)"></i>
-                  <!-- <i class="fa fa-star" ng-repeat="n in _.range(0, getPositiveMultiplierCount(opponent, attack))"></i>
-                  <i class="fa fa-minus-circle" ng-repeat="n in _.range(0, getNegativeMultiplierCount(opponent, attack))"></i> -->
-                </td>
-        <!--           <td>
-                  <span>{{ attack.value | number: 0 }}</span>
-                </td> -->
-                <td class="attackName">
-                  <span>
-                    {{ attack.name}}<!-- : {{ attack.value | number: 2 }} ( {{ attack.dps | number: 2 }} * {{ opponent.attack / target.defense | number: 2 }} * {{ attack.attackMultiplier | number: 2 }} * {{ attack.stabBonus | number: 2 }} ) -->
-                    <!-- defense mutliplier: {{ Math.log(opponent.defenseMultiplier) / Math.log(1.25) }}
-                    attack mutliplier: {{ Math.log(attack.attackMultiplier) / Math.log(1.25) }}
-                    stab mutliplier: {{ Math.log(attack.stabBonus) / Math.log(1.25) }} -->
-                  </span>
-                </td>
-                <td>
-                  <img style="max-width:60px" ng-src="img/bars/{{ attack.bars }}.png" />
-                </td>
-              </tr>
-            </table>
+          <div class="summary">
+            <div><strong>{{ opponent.displayName }}</strong></div>
+            <div>
+              <span class="stars">
+                <i class="fa fa-star" ng-repeat="n in getFullStars(opponent.primaryAttack)"></i><i class="fa fa-star-half-o " ng-repeat="n in getHalfStars(opponent.primaryAttack)"></i>
+              </span>
+              <span class="attack-name">with {{ opponent.primaryAttack.name }}</span>
+              <!-- <span class="tag">{{ attack.type }}</span> -->
+            </div>
           </div>
-        </td>
-      </tr>
-      <!-- <span>defenseMultiplier: {{ opponent.defenseMultiplier | number: 2 }}</span><br />
-      <span>attack: {{ opponent.attack | number: 2 }}</span><br />
-      <span>defense: {{ opponent.defense | number: 2 }}</span><br />
-      <div ng-repeat="attack in opponent.quickAttacks">
-        <i class="fa fa-star" ng-repeat="n in _.range(0, _.floor(attack.value/15))"></i>
-        <span>{{ attack.name}}: {{ attack.value | number: 2 }} ( {{ attack.dps | number: 2 }} * {{ opponent.attack / target.defense | number: 2 }} * {{ attack.attackMultiplier | number: 2 }} * {{ attack.stabBonus | number: 2 }} )</span><br />
-        <span>attack ratio: {{ opponent.attack / target.defense | number: 2 }}</span><br />
-        <span>dps: {{ attack.dps | number: 2 }}</span><br />
-        <span>multiplier: {{ attack.attackMultiplier | number: 2 }}</span><br />
-        <span>stab: {{ attack.stabBonus | number: 2 }}</span><br />
-      </div>
-      <div ng-repeat="attack in opponent.specialAttacks">
-        <i class="fa fa-star" ng-repeat="n in _.range(0, _.floor(attack.value/30))"></i>
-        <span>{{ attack.name}}: {{ attack.value | number: 2 }}</span><br />
-        <span>dps: {{ attack.dps | number: 2 }}</span><br />
-        <span>multiplier: {{ attack.attackMultiplier | number: 2 }}</span><br />
-        <span>stab: {{ attack.stabBonus | number: 2 }}</span><br />
-      </div> -->
-    </table>
+          <div class="detail">
+            <span class="subheader">Quick Attacks:</span>
+            <div ng-repeat="attack in opponent.quickAttacks" class="attack quickAttack">
+              <span class="stars">
+                <i class="fa fa-star" ng-repeat="n in getFullStars(attack)"></i><i class="fa fa-star-half-o " ng-repeat="n in getHalfStars(attack)"></i>
+              </span>
+              <span class="attack-name">{{ attack.name }}</span>
+              <!-- <span class="tag">{{ attack.type }}</span> -->
+            </div>
+            <span class="subheader">Special Attacks:</span>
+            <div ng-repeat="attack in opponent.specialAttacks" class="attack specialAttack">
+              <span class="stars">
+                <i class="fa fa-star" ng-repeat="n in getFullStars(attack)"></i><i class="fa fa-star-half-o " ng-repeat="n in getHalfStars(attack)"></i>
+              </span>
+              <span class="attack-name">{{ attack.name }}</span>
+              <span class="bars"><img ng-src="img/bars/{{ attack.bars }}.png" /></span>
+              <!-- <span class="tag">{{ attack.type }}</span> -->
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
   </div>
 </div>

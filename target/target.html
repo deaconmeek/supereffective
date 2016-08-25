@@ -1,11 +1,15 @@
 <div class="container">
-  <h2 style="margin:20px;" class="centered">Choose a target:</h2>
-  <div class="row">
-    <a ng-repeat="pokemon in pokemons" ng-href="#/opponents/{{pokemon.id}}">
-      <div class="target">
-        <img  ng-src="img/pokemon/{{pokemon.id}}.png" />
-        <span class="targetName">{{ pokemon.displayName }}</span>
+  <div class="row centered">
+    <div class="nav">
+      <a href="#/target" class="selected">select target</a>|<a href="#/mypokemon">my pokemon</a>
+    </div>
+    <input autofocus placeholder="Search..." type="text" value=""  ng-model="query" />
+
+    <div class="targets">
+      <a class="tile avatar-large" ng-repeat="pokemon in pokemons | filter:{displayName:query}" ng-href="#/opponents/{{pokemon.id}}">
+        <img ng-src="img/pokemon_sml3/{{pokemon.id}}.png" />
+        <span class="avatar2-name">{{ pokemon.displayName }}</span>
       </div>
-    </a>
+    </div>
   </div>
 </div>
