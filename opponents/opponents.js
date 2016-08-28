@@ -7,13 +7,14 @@ angular.module('pokemonFight.opponents', ['ngRoute'])
 .controller('OpponentsCtrl', function($scope, $routeParams, $http) {
   $http.get('api/pokemon.json').success(function(data) {
     $scope.pokemons = data;
-    $http.get('api/attacks.json').success(function(data) {
-      $scope.attacks = data;
-      $http.get('api/types.json').success(function(data) {
-        $scope.types = augmentTypes(data);
+    $http.get('api/types.json').success(function(data) {
+      $scope.types = augmentTypes(data);
 
-        $scope.target = fetchTarget($routeParams.pokemonId, $scope.pokemons, $scope.types);
-        $scope.opponents = augmentOpponents(fetchOpponents($scope.target, $scope.pokemons, $scope.attacks, $scope.types));
+      $scope.target = fetchTarget($routeParams.pokemonId, $scope.pokemons, $scope.types);
+
+      $http.get('api/attacks.json').success(function(data) {
+        $scope.attacks = data;
+
         $scope.getFullStars = getFullStars;
         $scope.getHalfStars = getHalfStars;
         $scope.getPositiveMultiplierCount = getPositiveMultiplierCount;
@@ -22,17 +23,23 @@ angular.module('pokemonFight.opponents', ['ngRoute'])
         $scope.showAllPokemon = showAllPokemon;
         $scope.showMyPokemon = showMyPokemon;
 
-        $scope.target.displayName = _.padStart($scope.target.id, 3, '0') + ': ' + $scope.target.name;
-        _.each($scope.opponents, opponent => {
-          opponent.displayName = _.padStart(opponent.id, 3, '0') + ': ' + opponent.name;
-          opponent.collapsedView = true;
-        });
-
-        $scope.showAllPokemonMode = false;
-        showMyPokemon();
+        initOpponents();
       });
     });
   });
+
+  function initOpponents() {
+
+    $scope.opponents = augmentOpponents(fetchOpponents($scope.target, $scope.pokemons, $scope.attacks, $scope.types));
+    $scope.target.displayName = _.padStart($scope.target.id, 3, '0') + ': ' + $scope.target.name;
+    _.each($scope.opponents, opponent => {
+      opponent.displayName = _.padStart(opponent.id, 3, '0') + ': ' + opponent.name;
+      opponent.collapsedView = true;
+    });
+
+    $scope.showAllPokemonMode = false;
+    showMyPokemon();
+  }
 
   function showAllPokemon() {
     _.each($scope.opponents, (opponent) => {
@@ -94,6 +101,7 @@ angular.module('pokemonFight.opponents', ['ngRoute'])
 
 
     let targetPokemon = pokemonById[targetPokemonId];
+    targetPokemon.displayName = _.padStart(targetPokemon.id, 3, '0') + ': ' + targetPokemon.name;
 
     let resistantTo = _.uniq(_.flatten(_.map(targetPokemon.types, o => typeByName[o].resistantTo))).sort();
     let succeptableTo = _.uniq(_.flatten(_.map(targetPokemon.types, o => typeByName[o].succeptableTo))).sort();
